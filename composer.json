@@ -1,0 +1,16 @@
+{
+    "name": "alban/breizh",
+    "authors": [
+        {
+            "name": "Alban Husar",
+            "email": "albanhusar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" :{
+            "Projet\\" : "./app/"
+        }
+
+    },
+    "require": {}
+}
