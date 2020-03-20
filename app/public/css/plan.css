@@ -1,0 +1,24 @@
+.plandusite h3{
+    text-align: center;
+}
+
+.index{
+    text-align: center;
+    padding-top: 20px;
+    
+    
+    
+}
+.index ul{
+    list-style-type: none;
+    
+}
+
+.index ul li a{
+    text-decoration: none;
+    color: #2b254e;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 80px;
+
+}

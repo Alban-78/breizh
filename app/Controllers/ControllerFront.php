@@ -16,4 +16,9 @@ function heritage(){
     require 'app/views/FrontEnd/patrimoine.php';
 }
 
+function plan(){
+
+    require 'app/views/FrontEnd/plandesite.php';
+}
+
 }

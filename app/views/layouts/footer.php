@@ -3,10 +3,9 @@
 
             <ul>
                 <li><a href="mentionslegales.html">Mentions Légales</a></li>
-                <li><a href="cgv.html">CGV</a></li>
-                <li><a href="plan.html">Plan du Site</a></li>
+                <li><a href="index.php?action=plan">Plan du Site</a></li>
                 <li><a href="trip.html">Circuits</a></li>
-                <li><a href="heritage.html">Patrimoine</a></li>
+                <li><a href="index.php?action=heritage">Patrimoine</a></li>
 
 
             </ul>
@@ -21,7 +20,7 @@
         </div>
     </footer>
 
- 
+    <script src="app/public/js/modal.js"></script>
 
 </body>
 
