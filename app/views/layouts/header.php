@@ -9,11 +9,60 @@
         <nav>
 
             <ul>
-                <li><a href="index.php?action=home">Accueil</a></li>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="food.html">Excursions culinaires</a></li>
                 <li><a href="trip.html">Circuits</a></li>
-                <li><a href="login.html">S'inscrire</a></li>
+                <li><a href="modal1" class="js-modal">S'inscrire</a></li>
+
+                <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
+
+                   <div class="modal-wrapper js-modal-stop">
+                       <button class="js-modal-close">Fermer</button>
+                    <h1 id="titlemodal">Inscription</h1>
+                <form name="mon-formulaire1" action="page-envoi.html" method="get">
+              <p>
+                  <input type="radio" name="civi" value="Mme" /> Madame
+                  <input type="radio" name="civi" value="Mlle" /> Mademoiselle
+                  <input type="radio" name="civi" value="Mr" /> Monsieur
+              </p>
+
+               <p>
+                 Votre Prénom :<br />
+                  <input type="text" name="prenom" value="" />
+              </p>
+              
+              <p>
+                 Votre Nom :<br />
+                  <input type="text" name="nom" value="" />
+              </p>
+
+              <p>
+                 Votre Mail :<br />
+                  <input type="text" name="nom" value="" />
+              </p>
+
+
+              <p>
+                Votre Mot de Passe :<br />
+                  <input type="password" name="passe" value="" />
+             </p>
+
+             <p>
+                Confirmation de votre Mot de Passe :<br />
+                  <input type="password" name="confirmpasse" value="" />
+             </p>
+
+             <p>
+                 <input type="submit" value="Envoyer" />
+                 <input type="reset" value="Annuler" />
+            </p>
+
+                </form>
+
+                </div>
+                
+                </aside>
 
 
             </ul>

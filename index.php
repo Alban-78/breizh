@@ -19,6 +19,10 @@ try {
             $controllerFront->heritage();
         }
 
+        else if($_GET['action'] == 'plan') {
+            $controllerFront->plan();
+        }
+
     }else{
         $controllerFront->home();
     }
