@@ -2,7 +2,7 @@
         <nav>
 
             <ul>
-                <li><a href="mentionslegales.html">Mentions Légales</a></li>
+                <li><a href="index.php?action=mention">Mentions Légales</a></li>
                 <li><a href="index.php?action=plan">Plan du Site</a></li>
                 <li><a href="trip.html">Circuits</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>

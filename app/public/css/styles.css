@@ -187,6 +187,12 @@ header nav ul li a
 
 }
 
+#main-image5{
+    height: 580px;
+    background: url('../../public/Images/maison.jpg') no-repeat center;   
+
+}
+
 #main-image6{
     height: 580px;
     background: url('../../public/Images/belleile.jpg') no-repeat center;   
@@ -204,6 +210,14 @@ header nav ul li a
 }
 
 #main-image2 h2
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0 40px 0;
+}
+
+#main-image5 h2
 {
     font-weight: normal;
     text-transform: uppercase;
