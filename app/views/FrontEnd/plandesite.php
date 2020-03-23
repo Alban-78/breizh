@@ -1,6 +1,6 @@
 <?php
-include_once "app/views/layouts/head.php";
-include_once "app/views/layouts/header.php";
+include_once "app/views/layouts/FrontEnd/head.php";
+include_once "app/views/layouts/FrontEnd/header.php";
 
 ?>
 
@@ -10,6 +10,7 @@ include_once "app/views/layouts/header.php";
             <a href="index1.html" class="button-1">Par ici</a>
         </div>
     </section>
+    
 <div class="plandusite">
 <h3>PLAN DU SITE</h3>
 </div>
@@ -28,7 +29,7 @@ include_once "app/views/layouts/header.php";
 
         
 <?php
-    include_once 'app/views/layouts/footer.php';
+    include_once 'app/views/layouts/FrontEnd/footer.php';
     ?>
 
 

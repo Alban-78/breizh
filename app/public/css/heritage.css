@@ -6,14 +6,14 @@
   }
 
 
-#heritage{
+.heritage{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
    
 }
 
-#historic h3{
+.historic h3{
     margin-left: 50px;
     text-decoration: underline;
     margin-bottom: 100px;
@@ -21,7 +21,7 @@
    
 }
 
-#historic #solidor img{
+.historic .solidor img{
 
     width: 300px;
     height: 300px;
@@ -35,21 +35,21 @@
     transition: .3s ease-in-out;
 }
 
-#historic #solidor img:hover{
+.historic .solidor img:hover{
     opacity: .5;
 }
 
-#historic #solidor p{
+.historic .solidor p{
     float: right;
     margin-top: 60px;
     
 }
 
-#historic #solidor h4{
+.historic .solidor h4{
   margin-right: 250px;
 }
 
-#historic #vannes img{
+.historic .vannes img{
 
     width: 300px;
     height: 300px;
@@ -63,20 +63,20 @@
     transition: .3s ease-in-out;
 }
 
-#historic #vannes img:hover{
+.historic .vannes img:hover{
     opacity: .5;
 }
 
-#historic #vannes p{
+.historic .vannes p{
     float: right;
     margin-top: 60px;
 }
 
-#historic #vannes h4{
+.historic .vannes h4{
   margin-right: 280px;
 }
 
-#historic #fortlalatte img{
+.historic .fortlalatte img{
 
     width: 300px;
     height: 300px;
@@ -90,20 +90,20 @@
     transition: .3s ease-in-out;
 }
 
-#historic #fortlalatte img:hover{
+.historic .fortlalatte img:hover{
     opacity: .5;
 }
 
-#historic #fortlalatte p{
+.historic .fortlalatte p{
     float: right;
     margin-top: 60px;
 }
 
-#historic #fortlalatte h4{
+.historic .fortlalatte h4{
   margin-right: 280px;
 }
 
-#historic #concarneau img{
+.historic .concarneau img{
 
     width: 300px;
     height: 300px;
@@ -117,20 +117,20 @@
     transition: .3s ease-in-out;
 }
 
-#historic #concarneau img:hover{
+.historic .concarneau img:hover{
     opacity: .5;
 }
 
-#historic #concarneau p{
+.historic .concarneau p{
     float: right;
     margin-top: 60px;
 }
 
-#historic #concarneau h4{
+.historic .concarneau h4{
   margin-right: 260px;
 }
 
-#historic #brest img{
+.historic .brest img{
 
     width: 300px;
     height: 300px;
@@ -144,20 +144,20 @@
     transition: .3s ease-in-out;
 }
 
-#historic #brest img:hover{
+.historic .brest img:hover{
     opacity: .5;
 }
 
-#historic #brest p{
+.historic .brest p{
     float: right;
     margin-top: 60px;
 }
 
-#historic #brest h4{
+.historic .brest h4{
   margin-right: 280px;
 }
 
-#natural h3{
+.natural h3{
     margin-left: 50px;
     text-decoration: underline;
     margin-bottom: 100px;
@@ -165,7 +165,7 @@
    
 }
 
-#natural #raz img{
+.natural .raz img{
 
     width: 300px;
     height: 300px;
@@ -179,11 +179,11 @@
     transition: .3s ease-in-out;
 }
 
-#natural #raz img:hover{
+.natural .raz img:hover{
     opacity: .5;
 }
 
-#natural #raz p{
+.natural .raz p{
     float: right;
     margin-top: 60px;
     margin-right: 50px;
@@ -191,11 +191,11 @@
 
 
 
-#natural #raz h4{
+.natural .raz h4{
   margin-right: 305px;
 }
 
-#natural #perros img{
+.natural .perros img{
 
     width: 300px;
     height: 300px;
@@ -209,11 +209,11 @@
     transition: .3s ease-in-out;
 }
 
-#natural #perros img:hover{
+.natural .perros img:hover{
     opacity: .5;
 }
 
-#natural #perros p{
+.natural .perros p{
     float: right;
     margin-top: 60px;
     margin-right: 50px;
@@ -221,11 +221,11 @@
 
 
 
-#natural #perros h4{
+.natural .perros h4{
   margin-right: 305px;
 }
 
-#natural #plougrescant img{
+.natural .plougrescant img{
 
     width: 300px;
     height: 300px;
@@ -239,11 +239,11 @@
     transition: .3s ease-in-out;
 }
 
-#natural #plougrescant img:hover{
+.natural .plougrescant img:hover{
     opacity: .5;
 }
 
-#natural #plougrescant p{
+.natural .plougrescant p{
     float: right;
     margin-top: 60px;
     margin-right: 50px;
@@ -251,11 +251,11 @@
 
 
 
-#natural #plougrescant h4{
+.natural .plougrescant h4{
   margin-right: 305px;
 }
 
-#natural #golfe img{
+.natural .golfe img{
 
     width: 300px;
     height: 300px;
@@ -269,11 +269,11 @@
     transition: .3s ease-in-out;
 }
 
-#natural #golfe img:hover{
+.natural .golfe img:hover{
     opacity: .5;
 }
 
-#natural #golfe p{
+.natural .golfe p{
     float: right;
     margin-top: 60px;
     margin-right: 50px;
@@ -281,11 +281,11 @@
 
 
 
-#natural #golfe h4{
+.natural .golfe h4{
   margin-right: 305px;
 }
 
-#natural #capsizun img{
+.natural .capsizun img{
 
     width: 300px;
     height: 300px;
@@ -299,11 +299,11 @@
     transition: .3s ease-in-out;
 }
 
-#natural #capsizun img:hover{
+.natural .capsizun img:hover{
     opacity: .5;
 }
 
-#natural #capsizun p{
+.natural .capsizun p{
     float: right;
     margin-top: 60px;
     margin-right: 50px;
@@ -311,7 +311,7 @@
 
 
 
-#natural #capsizun h4{
+.natural .capsizun h4{
   margin-right: 330px;
 }
 

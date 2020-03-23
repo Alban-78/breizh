@@ -16,9 +16,16 @@ function heritage(){
     require 'app/views/FrontEnd/patrimoine.php';
 }
 
+function mention(){
+
+    require 'app/views/FrontEnd/mentionslegales.php';
+}
+
 function plan(){
 
     require 'app/views/FrontEnd/plandesite.php';
 }
+
+
 
 }

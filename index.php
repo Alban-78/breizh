@@ -23,6 +23,10 @@ try {
             $controllerFront->plan();
         }
 
+        else if($_GET['action'] == 'mention') {
+            $controllerFront->mention();
+        }
+
     }else{
         $controllerFront->home();
     }

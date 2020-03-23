@@ -1,6 +1,6 @@
 <?php
-include_once "app/views/layouts/head.php";
-include_once "app/views/layouts/header.php";
+include_once "app/views/layouts/FrontEnd/head.php";
+include_once "app/views/layouts/FrontEnd/header.php";
 
 ?>
 
@@ -12,11 +12,11 @@ include_once "app/views/layouts/header.php";
     </section>
 
 
-    <div id="heritage">
-        <section id="historic">
+    <div class="heritage">
+        <section class="historic">
             <h3>PATRIMOINE HISTORIQUE</h3>
 
-            <article id="solidor">
+            <article class="solidor">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -29,7 +29,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="vannes">
+            <article class="vannes">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -42,7 +42,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="fortlalatte">
+            <article class="fortlalatte">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -55,7 +55,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="concarneau">
+            <article class="concarneau">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -68,7 +68,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="brest">
+            <article class="brest">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -86,9 +86,9 @@ include_once "app/views/layouts/header.php";
 
 
 
-        <section id="natural">
+        <section class="natural">
             <h3>PATRIMOINE NATUREL</h3>
-            <article id="raz">
+            <article class="raz">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -100,7 +100,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="perros">
+            <article class="perros">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -113,7 +113,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="plougrescant">
+            <article class="plougrescant">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -126,7 +126,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="golfe">
+            <article class="golfe">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -139,7 +139,7 @@ include_once "app/views/layouts/header.php";
 
             </article>
 
-            <article id="capsizun">
+            <article class="capsizun">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -159,5 +159,5 @@ include_once "app/views/layouts/header.php";
 
 
     <?php 
-    include_once 'app/views/layouts/footer.php';
+    include_once 'app/views/layouts/FrontEnd/footer.php';
     ?>
