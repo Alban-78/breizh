@@ -9,5 +9,5 @@
     <link href="app/public/css/plan.css" rel="stylesheet">
     <link href="app/public/css/mentions.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-    <title>Rando Breizh</title>
+    <title>Tro-Vale Breizh</title>
 </head>

@@ -1,6 +1,7 @@
-<?php 
-include_once "app/views/layouts/FrontEnd/head.php";
-include_once "app/views/layouts/FrontEnd/header.php"; 
+<?php
+include_once "app/views/FrontEnd/layouts/head.php";
+include_once "app/views/FrontEnd/layouts/header.php";
+
 ?>
 
 
@@ -97,5 +98,5 @@ include_once "app/views/layouts/FrontEnd/header.php";
     </section>
 
     <?php 
-    include_once 'app/views/layouts/FrontEnd/footer.php';
+    include_once 'app/views/FrontEnd/layouts/footer.php';
     ?>
