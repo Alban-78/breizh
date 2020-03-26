@@ -19,6 +19,14 @@ try {
             $controllerFront->heritage();
         }
 
+        else if($_GET['action'] == 'food') {
+            $controllerFront->food();
+        }
+
+        else if($_GET['action'] == 'trip') {
+            $controllerFront->trip();
+        }
+
         else if($_GET['action'] == 'plan') {
             $controllerFront->plan();
         }

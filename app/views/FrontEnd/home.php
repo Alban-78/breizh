@@ -8,7 +8,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 <section id="main-image">
         <div class="paper">
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
-            <a href="index1.html" class="button-1">Par ici</a>
+            <a href="index.php?action=trip" class="button-1">Par ici</a>
         </div>
     </section>
 
@@ -72,7 +72,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
     <section id="contact">
         <div class="paper">
             <h3>Contactez-Nous</h3>
-            <p>Chez Breizh nous savons que voyager est une aventure humaine mais également un engagement
+            <p>Chez Tro-Vale Breizh nous savons que voyager est une aventure humaine mais également un engagement
                 financier important pour vous. C’est pourquoi nous mettons un point d’honneur à prendre en compte
                 chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur
                 mesure.</p>

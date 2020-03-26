@@ -16,6 +16,17 @@ function heritage(){
     require 'app/views/FrontEnd/patrimoine.php';
 }
 
+function food(){
+
+    require 'app/views/FrontEnd/culinaire.php';
+}
+
+function trip(){
+
+    require 'app/views/FrontEnd/circuits.php';
+}
+
+
 function mention(){
 
     require 'app/views/FrontEnd/mentionslegales.php';
