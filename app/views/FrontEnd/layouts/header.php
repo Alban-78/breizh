@@ -11,15 +11,15 @@
             <ul>
                 <li><a href="/">Accueil</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
-                <li><a href="food.html">Excursions culinaires</a></li>
-                <li><a href="trip.html">Circuits</a></li>
-                <li><a href="modal1" class="js-modal">S'inscrire</a></li>
+                <li><a href="index.php?action=food">Excursions culinaires</a></li>
+                <li><a href="index.php?action=trip">Circuits</a></li>
+                <li><a href="#modal1" class="js-modal">S'inscrire</a></li>
 
                 <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
 
                    <div class="modal-wrapper js-modal-stop">
                        <button class="js-modal-close">Fermer</button>
-                    <h1 id="titlemodal">Inscription</h1>
+                    <h1 id="titlemodal">INSCRIPTION</h1>
                 <form name="mon-formulaire1" action="page-envoi.html" method="get">
               <p>
                   <input type="radio" name="civi" value="Mme" /> Madame
@@ -52,7 +52,7 @@
                 Confirmation de votre Mot de Passe :<br />
                   <input type="password" name="confirmpasse" value="" />
              </p>
-
+             <br>
              <p>
                  <input type="submit" value="Envoyer" />
                  <input type="reset" value="Annuler" />

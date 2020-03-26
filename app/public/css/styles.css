@@ -113,7 +113,9 @@ header nav ul li a
     text-decoration: none;
 }
 
-/*MODAL*/
+/* BOITE MODAL INSCRIPTION*/
+
+/* STRUCTURE DE BASE DE LA BOITE MODAL*/
 
 .modal{
     position: fixed;
@@ -149,7 +151,7 @@ header nav ul li a
 }
 
 *:focus{
-    box-shadow: 0 0 10px blue;
+    box-shadow: 0 0 10px black;
 }
 
 @keyframes fadeIn{
@@ -187,6 +189,18 @@ header nav ul li a
 
 }
 
+#main-image3{
+    height: 580px;
+    background: url('../../public/Images/crepes.jpg') no-repeat center;   
+
+}
+
+#main-image4{
+    height: 580px;
+    background: url('../../public/Images/stmalo1.jpg') no-repeat center;   
+
+}
+
 #main-image5{
     height: 580px;
     background: url('../../public/Images/maison.jpg') no-repeat center;   
@@ -216,6 +230,23 @@ header nav ul li a
     text-align: center;
     padding: 150px 0 40px 0;
 }
+
+#main-image3 h2
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0 40px 0;
+}
+
+#main-image4 h2
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0 40px 0;
+}
+
 
 #main-image5 h2
 {

@@ -4,7 +4,7 @@
             <ul>
                 <li><a href="index.php?action=mention">Mentions Légales</a></li>
                 <li><a href="index.php?action=plan">Plan du Site</a></li>
-                <li><a href="trip.html">Circuits</a></li>
+                <li><a href="index.php?action=trip">Circuits</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
 
 
@@ -12,7 +12,7 @@
 
         </nav>
         <div class="paper">
-            <h1>Rando Breizh<span class="black">.</span></h1>
+            <h1>Tro-Vale Breizh<span class="black">.</span></h1>
             <div class="copyright">Copyright © 2020 Tous droits réservés.
 
             </div>
