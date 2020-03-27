@@ -9,7 +9,7 @@
         <nav>
 
             <ul>
-                <li><a href="/">Accueil</a></li>
+                <li><a href="index.php?action=home">Accueil</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="index.php?action=food">Excursions culinaires</a></li>
                 <li><a href="index.php?action=trip">Circuits</a></li>
