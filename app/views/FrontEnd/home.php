@@ -1,11 +1,15 @@
 <?php
+
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
+if(!empty($_POST)){
+    $errors = $contact;
+}
 
 ?>
 
 
-<section id="main-image">
+<section id="main-image" alt="ploumanach">
         <div class="paper">
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
             <a href="index.php?action=trip" class="button-1">Par ici</a>
@@ -14,23 +18,26 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
     <section id="stages">
         <div class="paper">
+
+
+
             <ul>
                 <li id="stage-1">
-                    <img src="app/public/Images/korriganpapier.jpg">
+                    <img src="app/public/Images/korriganpapier.jpg" alt="korrigan">
                     <h4>Planifier</h4>
                     <p>Confiez-nous vos rêves d’évasion : en famille ou entre amis, nous trouverons le circuit qui
                         comblera vos attentes.</p>
                 </li>
 
                 <li id="stage-2">
-                    <img src="app/public/Images/korrigantableau.jpg">
+                    <img src="app/public/Images/korrigantableau.jpg" alt="korrigan">
                     <h4>Organiser</h4>
                     <p>Bénéficiez de l’expertise de nos spécialistes de chaque destination, ils vous accompagnent dans
                         la réalisation de votre voyage.</p>
                 </li>
 
                 <li id="stage-3">
-                    <img src="app/public/Images/korrigantableauprofil.jpg">
+                    <img src="app/public/Images/korrigantableauprofil.jpg" alt="korrigan">
                     <h4>Voyager</h4>
                     <p>Nous nous chargeons d’assurer votre sécurité et de veiller à votre pleine sérénité tout au long
                         de votre voyage.</p>
@@ -43,7 +50,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
     <section id="alternative">
         <div class="paper">
-            <article style="background-image: url(app/public/Images/pharepetitminou.jpg);">
+            <article style="background-image: url(app/public/Images/pharepetitminou.jpg);" alt="phare-du-petit-minou">
                 <div class="cover">
                     <h4>Partez en famille</h4>
                     <p><small>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux !</small></p>
@@ -54,7 +61,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
 
 
-            <article style="background-image: url(app/public/Images/quiberon2.jpg);">
+            <article style="background-image: url(app/public/Images/quiberon2.jpg);" alt="côte-sauvage-de-quiberon">
                 <div class="cover">
                     <h4>Envie de s'evader</h4>
                     <p><small>Parfois un peu d’évasion serait le bienvenue et ferait le plus grand bien !
@@ -78,21 +85,51 @@ include_once "app/views/FrontEnd/layouts/header.php";
                 mesure.</p>
         </div>
         
-        <form>
+        <form method="post" action="">
+        <?php
+        if(isset($errors)) :
+        if($errors) :
+        foreach($errors as $error) :
+        ?>
+
+            <div class="row">
+                <div>
+                    <div class="message erreur"><?= $error ?></div>
+                </div>
+            </div>
+
+            <?php
+             endforeach;
+             else :
+            ?>
+
+
+            <div class="row">
+                <div>
+                    <div class="message confirmation">Votre message a bien été envoyé !</div>
+                </div>
+            </div>
+
+
+            <?php
+            endif;
+            endif
+            ?>
             <label for="name">Nom</label>
-            <input type="text" id="name" placeholder="Votre Nom">
+            <input type="text" name="name" id="name" placeholder="Votre Nom" value="<?php if(isset($_POST["name"]))echo $_POST["name"] ?>">
 
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Votre Email">
+            <input type="text" name="email" id="email" placeholder="Votre Email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>">
             
             <label for="objet">Objet:</label>
-            <input type="text" name="objet" id="objet" placeholder="Objet Message">
+            <input type="text" name="objet" id="objet" placeholder="Objet Message" value="<?php if(isset($_POST["objet"]))echo $_POST["objet"] ?>">
             
               <br><br><br>
             <p><label for="message">Votre Message:</label> </p>
-                <p><textarea rows="10" cols="80" name="message" id="message" placeholder="votre message"></textarea></p>
+                <p><textarea rows="10" cols="80" name="message" id="message" placeholder="votre message" value="<?php if(isset($_POST["message"]))echo $_POST["message"] ?>"></textarea></p>
                
             <input type="submit" value="OK" class="button-3">
+
 
         </form>
     </section>

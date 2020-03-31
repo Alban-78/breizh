@@ -5,11 +5,11 @@
         <div class="title">
         <h1>TRO-VALE<br>BREIZH <span class="black">.</span></h1>
         </div>
-        <img src="app/public/Images/drapeau.png" class="drapeau">
+        <img src="app/public/Images/drapeau.png" class="drapeau" alt="drapeau-breton">
         <nav>
 
             <ul>
-                <li><a href="index.php?action=home">Accueil</a></li>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="index.php?action=food">Excursions culinaires</a></li>
                 <li><a href="index.php?action=trip">Circuits</a></li>
