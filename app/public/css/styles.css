@@ -76,7 +76,9 @@ small
     font-size: 13px;
     font-style: italic;
 }
+
 /* HEADER */
+
 header
 {
     
@@ -466,14 +468,17 @@ background-color: #444;
 }
 footer nav
 {
-    float: right;
-    margin-top: 50px;
+
+}
+footer nav ul{
+    margin: 0 auto;
+    width: 50%;
 }
 footer nav ul li
 {
     display: inline-block;
-    margin-right: 150px;
-    margin-bottom: 50px;
+    margin: 0 25px;
+    margin-top: 25px;
 }
 footer nav ul li a
 {

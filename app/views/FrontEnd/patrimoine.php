@@ -4,7 +4,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
 ?>
 
-<section id="main-image2">
+<section id="main-image2" alt="st-anne-d'auray">
         <div class="paper">
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
             <a href="index.php?action=trip" class="button-1">Par ici</a>
@@ -22,7 +22,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/solidor.jpg">
+                    <img src="app/public/Images/solidor.jpg" alt="tour-solidor">
                 </div>
                 <h4>La Tour Solidor à Saint-Malo</h4>
 
@@ -35,7 +35,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/vannes1.jpg">
+                    <img src="app/public/Images/vannes1.jpg" alt="rempart-de-vannes">
                 </div>
                 <h4>Le Vieux Vannes</h4>
 
@@ -48,7 +48,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/fortlalatte.jpg">
+                    <img src="app/public/Images/fortlalatte.jpg" alt="fort-la-latte">
                 </div>
                 <h4>Fort la Latte</h4>
 
@@ -61,7 +61,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/concarneau.jpg">
+                    <img src="app/public/Images/concarneau.jpg" alt="ville-close-concarneau">
                 </div>
                 <h4>Ville Close de Concarneau</h4>
 
@@ -74,7 +74,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/brest.jpg">
+                    <img src="app/public/Images/brest.jpg" alt="château-de-brest">
                 </div>
                 <h4>Château de Brest</h4>
 
@@ -94,7 +94,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/pointeraz.jpg">
+                    <img src="app/public/Images/pointeraz.jpg" alt="pointe-du-raz">
                 </div>
                 <h4>La Pointe du Raz, Finistère</h4>
 
@@ -106,7 +106,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/perros.jpg">
+                    <img src="app/public/Images/perros.jpg" alt="perros-guirec">
                 </div>
                 <h4>La Côte de Granite Rose</h4>
 
@@ -119,7 +119,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/plougrescant.jpg">
+                    <img src="app/public/Images/plougrescant.jpg" alt="plougrescant">
                 </div>
                 <h4>Les Rochers de Plougrescant</h4>
 
@@ -132,7 +132,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/golfe.jpg">
+                    <img src="app/public/Images/golfe.jpg" alt="golfe-du-morbihan">
                 </div>
                 <h4>Le Golfe du Morbihan</h4>
 
@@ -145,7 +145,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
                         depuis<br> les années 1500, quand un imprimeur<br> anonyme assembla ensemble des morceaux<br> de
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
-                    <img src="app/public/Images/capsizun.jpg">
+                    <img src="app/public/Images/capsizun.jpg" alt="cap-sizun">
                 </div>
                 <h4>Le Cap Sizun</h4>
 
