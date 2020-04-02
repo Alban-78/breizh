@@ -31,16 +31,14 @@ class FrontManager extends Manager{
 
     }
 
-    public function register($pseudo,$email,$emailconf,$password,$passwordconf){
+    public function register($pseudo,$email,$password){
        
         $bdd = $this->dbConnect();
-        $register = $bdd->prepare('INSERT INTO register(pseudo, email, emailconf, password, passwordconf) VALUES (:pseudo, :email, :emailconf, :password, :passwordconf)');
+        $register = $bdd->prepare('INSERT INTO users(name, email, password) VALUES (:name, :email, :password)');
         $register->execute([
-            'pseudo' => htmlentities($pseudo),
-            'email' => htmlentities($email),
-            'emailconf' => htmlentities($emailconf),
-            'password' => htmlentities($password),
-            'passwordconf' => htmlentities($passwordconf)
+            "name" => htmlentities($pseudo),
+            "email" => htmlentities($email),
+            "password" => password_hash($password, PASSWORD_DEFAULT)
         ]);
         return $register;
 

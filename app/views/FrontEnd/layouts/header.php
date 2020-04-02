@@ -1,11 +1,11 @@
-<body>
 <?php
 
-// if(!empty($_POST)){
-//     $register = new Projet\Controllers\ControllerFront();
-//     $errors = $register->register();
-// }
+if(!empty($_POST)){
+    $register = new Projet\Controllers\ControllerFront();
+    $errors = $register->registerUsers();
+}
 ?>
+<body>
     <header>
         <div class="paper">
         </div>
@@ -28,8 +28,8 @@
                    <div class="modal-wrapper js-modal-stop">
                        <button class="js-modal-close">Fermer</button>
                     <h1 id="titlemodal">INSCRIPTION</h1>
-                <form name="mon-formulaire1" action="page-envoi.html" method="get">
-                <form method="post" action="">
+                <!-- <form name="mon-formulaire1" action="page-envoi.html" method="get"> -->
+                <form name="mon-formulaire1" method="post" action="">
         <?php
         if(isset($errors)) :
         if($errors) :
@@ -67,28 +67,28 @@
 
               <p>
                  Votre Nom :<br />
-                  <input type="text" name="nom" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>" />
+                  <input type="text" name="pseudo" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>" />
               </p>
 
               <p>
                  Votre Mail :<br />
-                  <input type="text" name="nom" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>" />
+                  <input type="text" name="email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>" />
               </p>
 
               <p>
                 Confirmation de votre Mail :<br />
-                  <input type="text" name="nom" value="<?php if(isset($_POST["emailconf"]))echo $_POST["emailconf"] ?>" />
+                  <input type="text" name="emailConf" value="<?php if(isset($_POST["emailConf"]))echo $_POST["emailConf"] ?>" />
               </p>
 
 
               <p>
                 Votre Mot de Passe :<br />
-                  <input type="password" name="passe" value="<?php if(isset($_POST["password"]))echo $_POST["password"] ?>" />
+                  <input type="password" name="password" value="" />
              </p>
 
              <p>
                 Confirmation de votre Mot de Passe :<br />
-                  <input type="password" name="confirmpasse" value="<?php if(isset($_POST["passwordconf"]))echo $_POST["passwordconf"] ?>" />
+                  <input type="password" name="passwordConf" value="" />
              </p>
              <br>
              <p>
