@@ -3,7 +3,8 @@
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
 if(!empty($_POST)){
-    $errors = $contact;
+    $contact = new Projet\Controllers\ControllerFront();
+    $errors = $contact->contact();
 }
 
 ?>

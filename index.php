@@ -27,6 +27,11 @@ try {
             $controllerFront->trip();
         }
 
+        else if($_GET['action'] == 'connect') {
+            $controllerFront->connect();
+        }
+
+
         else if($_GET['action'] == 'plan') {
             $controllerFront->plan();
         }
@@ -34,6 +39,7 @@ try {
         else if($_GET['action'] == 'mention') {
             $controllerFront->mention();
         }
+
 
     }else{
         $controllerFront->home();
