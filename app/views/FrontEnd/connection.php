@@ -32,6 +32,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 <div class="container">
     <div id="slider">
         <ul class="slides">
+            <li class="slide"><img src="app/public/Images/drapeau2.jpg"></li>
             <li class="slide"><img src="app/public/Images/auray.jpg"></li>
             <li class="slide"><img src="app/public/Images/stmalo.jpg"></li>
             <li class="slide"><img src="app/public/Images/plougrescant.jpg"></li>
