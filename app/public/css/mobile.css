@@ -1,0 +1,83 @@
+/*-----MEDIAQUERIES------*/
+/*------PAGE D'ACCUEIL-----*/
+@media screen and (max-width:800px) {
+.title{
+    position: relative;
+    left: 400px;
+    text-align: center;
+}
+   
+.drapeau{
+    display: none;
+}
+
+
+/*---EFFACER LE MENU---*/
+.menuprincipal ul {
+    display: none;
+}
+
+.menuprincipal {
+    position: relative;
+}
+
+.menuprincipal ul li {
+    display: block;
+    margin-left: 100px;
+    margin-bottom: 20px;
+
+}
+
+/*---FAIT APPARAITRE LE BURGER EN RESPONSIVE---*/
+/* .menuprincipal .menumobile {
+    display: block;
+} */
+
+/*----RETRECIR LE BURGER---*/
+/* /* .menuprincipal .menumobile img {
+    width: 40px; 
+} */
+
+/*----CLIQUE SUR LE BURGER---*/
+/* .menuprincipal .menumobile img:hover {
+    cursor: pointer;
+} */
+
+
+/*----FAIT APPARAITRE LE MENU EN CLIQUANT SUR LE BURGER---*/
+/* .menuprincipal [type="checkbox"]:checked+label+ul {
+    display: block;
+} */
+
+/*----FAIT DISPARAITRE LE MAIN IMAGE EN RESPONSIVE----*/
+#main-image{
+    display: none;
+}
+
+/*----CENTRER LES KORRIGANS-----*/
+
+#stages ul{
+    width: 60%;
+    position: relative;
+    margin: auto;
+    left: 350px;
+    
+   
+}
+
+#alternative article{
+    width: 60%;
+    position: relative;
+    margin: auto;
+    left: 20px;
+    
+  
+    
+}
+
+
+
+
+
+
+}
