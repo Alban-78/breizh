@@ -13,7 +13,13 @@ if(!empty($_POST)){
         <h1>TRO-VALE<br>BREIZH <span class="black">.</span></h1>
         </div>
         <img src="app/public/Images/drapeau.png" class="drapeau" alt="drapeau-breton">
-        <nav>
+        
+        <nav class="menuprincipal">
+
+        <input type="checkbox" id="menumobile" role="button">
+            <label for="menumobile" class="menumobile">
+                <img src="app/public/Images/burger.png">
+            </label>
 
             <ul>
                 <li><a href="/">Accueil</a></li>
