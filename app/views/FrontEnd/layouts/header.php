@@ -16,11 +16,6 @@ if(!empty($_POST)){
         
         <nav class="menuprincipal">
 
-        <input type="checkbox" id="menumobile" role="button">
-            <label for="menumobile" class="menumobile">
-                <img src="app/public/Images/burger.png">
-            </label>
-
             <ul>
                 <li><a href="/">Accueil</a></li>
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>

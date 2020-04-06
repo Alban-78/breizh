@@ -1,83 +1,335 @@
 /*-----MEDIAQUERIES------*/
 /*------PAGE D'ACCUEIL-----*/
-@media screen and (max-width:800px) {
-.title{
-    position: relative;
-    left: 400px;
-    text-align: center;
-}
+@media screen and (max-width:860px) {
+
+
+    body{
+        width: 100%;
+    }
    
-.drapeau{
-    display: none;
-}
+    .title {
+        position: relative;
+        left: 400px;
+        text-align: center;
+    }
+
+    .drapeau {
+        display: none;
+    }
 
 
-/*---EFFACER LE MENU---*/
-.menuprincipal ul {
-    display: none;
-}
+    .menuprincipal {
 
-.menuprincipal {
-    position: relative;
-}
-
-.menuprincipal ul li {
-    display: block;
-    margin-left: 100px;
-    margin-bottom: 20px;
-
-}
-
-/*---FAIT APPARAITRE LE BURGER EN RESPONSIVE---*/
-/* .menuprincipal .menumobile {
-    display: block;
-} */
-
-/*----RETRECIR LE BURGER---*/
-/* /* .menuprincipal .menumobile img {
-    width: 40px; 
-} */
-
-/*----CLIQUE SUR LE BURGER---*/
-/* .menuprincipal .menumobile img:hover {
-    cursor: pointer;
-} */
+        text-align: center;
+        margin-right: 65%;
 
 
-/*----FAIT APPARAITRE LE MENU EN CLIQUANT SUR LE BURGER---*/
-/* .menuprincipal [type="checkbox"]:checked+label+ul {
-    display: block;
-} */
+    }
 
-/*----FAIT DISPARAITRE LE MAIN IMAGE EN RESPONSIVE----*/
-#main-image{
-    display: none;
-}
+    .menuprincipal ul {
+        margin-left: 100%;
+        width: 100%;
+        display: flex;
 
-/*----CENTRER LES KORRIGANS-----*/
+    }
 
-#stages ul{
-    width: 60%;
-    position: relative;
-    margin: auto;
-    left: 350px;
+    .menuprincipal li {
+        padding-left: 5px;
+
+
+
+
+    }
+
+    .menuprincipal a {
+        font-size: 1.1em;
+        display: inline-block;
+
+    }
+
+
+
+
+    /*----FAIT DISPARAITRE LE MAIN IMAGE EN RESPONSIVE----*/
+    #main-image {
+        display: none;
+    }
+
+    #main-image2 {
+        display: none;
+    }
+
+    #main-image3 {
+        display: none;
+    }
+
+    #main-image4 {
+        display: none;
+    }
+
+    /* #main-image5 {
+        display: none;
+    } */
+
+    #main-image6 {
+        display: none;
+    }
+
+    /*----CENTRER LES KORRIGANS-----*/
+
+    #stages ul {
+        width: 60%;
+        position: relative;
+        margin: auto;
+        left: 350px;
+
+
+    }
+
+    #alternative {
+        display: none;
+    }
+
+    #contact form {
+        position: relative;
+        margin: 0 auto;
+        left: 300px;
+        padding-top: 20px;
+
+    }
+
+    p textarea {
+        margin-left: -200px;
+    }
+
+    #contact label {
+        display: none;
+    }
+
+    footer {
+        width: 400%;
+
+
+
+    }
+
+    footer .menuprincipal {
+        display: none;
+    }
+
+
+    /*----PAGE PATRIMOINE----*/
+
+    .heritage h3 {
+
+        margin-top: 70px;
+    }
+
+    .solidor p{
+        display: none;
+    }
+
+    .vannes p{
+        display: none;
+    }
+
+    .fortlalatte p{
+        display: none;
+    }
+
+    .concarneau p{
+        display: none;
+    }
+
+    .brest p{
+        display: none;
+    }
+
+    .raz p{
+        display: none;
+    }
+
+    .perros p{
+        display: none;
+    }
+
+    .plougrescant p{
+        display: none;
+    }
+
+    .golfe p{
+        display: none;
+    }
+
+    .capsizun p{
+        display: none;
+    }
+
+    .historic h4 {
+        margin-left: 90px;
+        width: 50%;
+        margin-left: 60px;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+     /*----HISTORIC----*/
+     
+    .solidor {
+        margin-left: 30px;
+    } 
+
+
+
+    .vannes {
+        margin-left: 30px;
+    } */
+
+
+
+    .fortlalatte {
+        margin-left: 30px;
+    }
+
+
+    .concarneau {
+        margin-left: 30px;
+    } */
+
+
+    .brest {
+        margin-left: 30px;
+    } 
+
+    /*----NATURAL----*/
+
+    .raz {
+        margin-right: 250px;
+    }
+
+    .raz img {
+        margin-right: 120px;
+    }
+
+    .raz h4 {
+       width: 50%;
+       margin-left: 60px;
+    }
+
+
+    .perros {
+        margin-right: 250px;
+    }
+
+    .perros img {
+        margin-right: 120px;
+    }
+
+    .perros h4 {
+        width: 50%;
+        margin-left: 60px;
+     }
+ 
+
+    .plougrescant {
+        margin-right: 250px;
+    }
+
+    .plougrescant img {
+        margin-right: 120px;
+    }
+
+    .plougrescant h4 {
+        width: 50%;
+        margin-left: 60px;
+     }
+
+    .golfe {
+        margin-right: 250px;
+    }
+
+    .golfe img {
+        margin-right: 120px;
+    }
+
+    .golfe h4 {
+        width: 50%;
+        margin-left: 60px;
+     }
+
+    .capsizun {
+        margin-right: 250px;
+    }
+
+    .capsizun img {
+        margin-right: 120px;
+    }
+
+    .capsizun h4 {
+        width: 50%;
+        margin-left: 60px;
+     } 
+
+     .titre-culinaire{
+       display: inline-block;
+       margin-left: 450px;
+       
+    }
+     /*------PAGE SE CONNECTER-----*/
+      
+
+     .connection .titre-connect{
     
-   
-}
+      margin-left: 350px;
+      
+    }
 
-#alternative article{
-    width: 60%;
-    position: relative;
-    margin: auto;
-    left: 20px;
-    
-  
-    
-}
+    fieldset{
+       
+        height: 100px;
+        width: 500px;
+        margin-left: 250px;
+
+        
+    }
+
+    .contact fieldset p{
+        display: block;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    .container{
+        
+        margin-left: -250px;
+    }
+
+    .hermine{
+        margin-right: -600px;
+    }
+
+    /*----PAGE MENTIONS LEGALES----*/
 
 
+    #main-image5{
+        width: 100%;
+        position: fixed;
+       
+       
+    }
 
 
+   /*----PAGE PLAN DE SITE----*/
 
+   .plandusite h3{
+      display: flex;
+      margin-left: 450px;
+      margin-top: 200px;
+   }
+   .index{
+       display: inline-block;
+       margin-left: 450px;
+   }
 
 }

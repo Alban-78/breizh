@@ -9,7 +9,7 @@ if(!empty($_POST)){
 
 ?>
 
-
+<main>
 <section id="main-image" alt="ploumanach">
         <div class="paper">
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
@@ -134,6 +134,7 @@ if(!empty($_POST)){
 
         </form>
     </section>
+    </main>
 
     <?php 
     include_once 'app/views/FrontEnd/layouts/footer.php';

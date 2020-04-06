@@ -37,7 +37,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
                     <img src="app/public/Images/vannes1.jpg" alt="rempart-de-vannes">
                 </div>
-                <h4>Le Vieux Vannes</h4>
+                <h4>Le Vieux Vannes, Morbihan</h4>
 
 
             </article>
@@ -50,7 +50,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
                     <img src="app/public/Images/fortlalatte.jpg" alt="fort-la-latte">
                 </div>
-                <h4>Fort la Latte</h4>
+                <h4>Fort la Latte, Côte d'Armor</h4>
 
 
             </article>
@@ -76,7 +76,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                         texte pour réaliser un livre<br> spécimen de polices de texte.</p>
                     <img src="app/public/Images/brest.jpg" alt="château-de-brest">
                 </div>
-                <h4>Château de Brest</h4>
+                <h4>Château de Brest, Finistère</h4>
 
 
             </article>

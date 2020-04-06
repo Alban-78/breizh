@@ -6,7 +6,9 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
 
 <section class="connection">
+    <div class="titre-connect">
 <h1>SE CONNECTER</h1>
+    </div>    
 <form class="contact" action="traitement.php" method="post">
 
 <fieldset>
