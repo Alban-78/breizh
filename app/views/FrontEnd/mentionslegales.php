@@ -12,8 +12,9 @@ include_once "app/views/FrontEnd/layouts/header.php";
         </div>
 
 
-        
+ <div class="container-mentions">  
 <section class="mentions">
+
 <h3>INFORMATIONS LÉGALES</h3><br><br>
 <h3>1. PRÉSENTATION DU SITE.</h3>
 <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://www.trovalebreizh.com/">www.trovalebreizh.com</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
@@ -81,6 +82,7 @@ Le modèle de mentions légales est offert par Subdelirium.com <a target="_blank
 <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
 
 </section>
+</div>  
 
 <?php
     include_once 'app/views/FrontEnd/layouts/footer.php';

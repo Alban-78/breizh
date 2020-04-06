@@ -1,5 +1,5 @@
 <footer>
-        <nav>
+        <nav class="menuprincipal">
 
             <ul>
                 <li><a href="index.php?action=mention">Mentions Légales</a></li>

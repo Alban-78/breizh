@@ -12,7 +12,9 @@ include_once "app/views/FrontEnd/layouts/header.php";
     </section>
 
     <section class="culinaire">
+        <div class="titre-culinaire">
         <h3>EXCURSIONS CULINAIRES</h3>
+        </div>
 
 
         
