@@ -14,36 +14,44 @@ class FrontManager extends Manager{
     }
 
     
+     //ENVOIE LE FORMULAIRE DE CONTACT
 
-    public function contact($name,$email,$objet,$message){
+    public function contact($name,$email,$objet,$content){
        
         $bdd = $this->dbConnect();
-        $contact = $bdd->prepare('INSERT INTO contact(name, email, objet, message) VALUES (:name, :email, :objet, :message)');
-        $contact->execute([
-            'name' => htmlentities($name),
-            'email' => htmlentities($email),
-            'objet' => htmlentities($objet),
-            'message' => htmlentities($message)
-        ]);
+        $contact = $bdd->prepare('INSERT INTO contact ( name, email, objet, message) VALUES ( ?, ?, ?, ?)');
+        $contact->execute(array($name,$email,$objet,$content));
         return $contact;
 
 
 
     }
+     //ENREGISTRE UN NOUVEL UTILISATEUR
 
-    public function register($pseudo,$email,$password){
+    public function registerUsers($pseudo,$email,$passwordRegister){
        
         $bdd = $this->dbConnect();
-        $register = $bdd->prepare('INSERT INTO users(name, email, password) VALUES (:name, :email, :password)');
+        $register = $bdd->prepare("INSERT INTO register (pseudo, email, password) VALUES ( :pseudo, :email, :password)");
         $register->execute([
-            "name" => htmlentities($pseudo),
+            "pseudo" => htmlentities($pseudo),
             "email" => htmlentities($email),
-            "password" => password_hash($password, PASSWORD_DEFAULT)
+            "password" => password_hash($passwordRegister, PASSWORD_DEFAULT)
         ]);
+        
         return $register;
 
 
 
+    }
+     //VERIFIE SI LE PSEUDO N'A PAS ETE DEJA ENREGISTRER UNE PREMIERE FOIS
+     
+    public function pseudoCheck($pseudo){
+        $bdd = $this->dbConnect();
+        $pseudoCheck = $bdd->prepare('SELECT count(*) FROM register WHERE pseudo = ? ');
+        $pseudoCheck->execute([$pseudo]);
+        $pseudoCheck = $pseudoCheck->fetch()[0];
+
+        return $pseudoCheck;
     }
 
 }

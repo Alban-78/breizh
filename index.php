@@ -11,6 +11,8 @@ try {
     $controllerFront = new \Projet\Controllers\ControllerFront(); //Objet controler
 
     if (isset($_GET['action'])) {
+
+
         if($_GET['action'] == 'actus'){
             $controllerFront->actus();
               
@@ -30,7 +32,6 @@ try {
         else if($_GET['action'] == 'connect') {
             $controllerFront->connect();
         }
-
 
         else if($_GET['action'] == 'plan') {
             $controllerFront->plan();
