@@ -1,8 +1,7 @@
 <?php
-
-if(!empty($_POST)){
-    $register = new Projet\Controllers\ControllerFront();
-    $errors = $register->registerUsers();
+if (!empty($_POST)) {
+    $registerS = new Projet\Controllers\ControllerFront();
+    $errors = $registerS->registerUser();
 }
 ?>
 <body>
@@ -29,7 +28,7 @@ if(!empty($_POST)){
                    <div class="modal-wrapper js-modal-stop">
                        <button class="js-modal-close">Fermer</button>
                     <h1 id="titlemodal">INSCRIPTION</h1>
-                <!-- <form name="mon-formulaire1" action="page-envoi.html" method="get"> -->
+            
                 <form name="mon-formulaire1" method="post" action="">
         <?php
         if(isset($errors)) :
@@ -68,29 +67,29 @@ if(!empty($_POST)){
 
               <p>
                  Votre Nom :<br />
-                  <input type="text" name="pseudo" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>" />
+                  <input id="pseudo" type="text" name="pseudo" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>" />
               </p>
 
               <p>
                  Votre Mail :<br />
-                  <input type="text" name="email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>" />
-              </p>
-
-              <p>
-                Confirmation de votre Mail :<br />
-                  <input type="text" name="emailConf" value="<?php if(isset($_POST["emailConf"]))echo $_POST["emailConf"] ?>" />
+                  <input id="emailRegister" type="text" name="email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>" />
               </p>
 
 
               <p>
                 Votre Mot de Passe :<br />
-                  <input type="password" name="password" value="" />
+                  <input id="passwordRegister" type="password" name="passwordRegister" value="<?php if(isset($_POST["passwordRegister"]))echo $_POST["passwordRegister"] ?>" />
              </p>
 
              <p>
                 Confirmation de votre Mot de Passe :<br />
-                  <input type="password" name="passwordConf" value="" />
+                  <input id="passwordConfRegister" type="password" name="passwordConfRegister" value="<?php if(isset($_POST["passwordConfRegister"]))echo $_POST["passwordConfRegister"] ?>" />
              </p>
+             <?= var_dump($_POST["pseudo"]);
+                var_dump($_POST["email"]);
+                var_dump($_POST["passwordRegister"]);
+                var_dump($_POST["passwordConfRegister"]);
+                var_dump($registerS) ?>
              <br>
              <p>
                  <input type="submit" value="Envoyer" />
