@@ -1,0 +1,56 @@
+.randoshare{
+    text-align: center;
+    padding-top: 60px;
+    
+    
+}
+
+.randoshare h3{
+    
+    padding-top: 60px;
+    text-decoration: underline;
+}
+
+.boussole img {
+   
+    animation: spin 15s linear infinite;
+    -webkit-animation: spin 15s linear infinite;
+    height: 200px;
+    width: 150px;
+    
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+.zoom{
+    display: flex;
+    justify-content: center;
+    
+} 
+
+.zoom img{
+    height: 200px;
+    width: 200px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+   
+}
+
+/* ROTATION ET DEZOOM */
+
+.zoom img {
+	-webkit-transform: rotate(10deg) scale(1.25);
+	transform: rotate(10deg) scale(1.25);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.zoom :hover img {
+	-webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+}

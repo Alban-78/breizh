@@ -25,9 +25,9 @@ class ControllerFront {
         require 'app/views/FrontEnd/circuits.php';
     }
 
-    function connect(){
+    function login(){
 
-        require 'app/views/FrontEnd/connection.php';
+        require 'app/views/FrontEnd/login.php';
     }
 
 
@@ -41,11 +41,16 @@ class ControllerFront {
         require 'app/views/FrontEnd/plandesite.php';
     }
 
+    function account(){
+
+        require 'app/views/FrontEnd/account.php';
+    }
+
 
 
      //PERMET DE PRENDRE CONTACT AVEC L'ADMIN
     function contact(){
-
+       
         extract($_POST);
         $validation = true;
         $errors = [];
@@ -84,12 +89,14 @@ class ControllerFront {
             $contactManager = new \Projet\Models\FrontManager();
             $contactManager->contact($name,$email,$objet,$content);
         }
-        
-        return $errors;
+        require 'app/views/FrontEnd/home.php';
+       
     }
 
       //PERMET A L'UTILISATEUR DE S'ENREGISTRER SUR LE SITE
+      
       function registerUser(){
+          
         extract($_POST);
     
         $validation = true;
@@ -118,24 +125,44 @@ class ControllerFront {
             if($usersPseudo == true) {
                  $validation = false;
                 $errors[] = 'Ce pseudo est déjà pris !';
+
+
+            }
+            else if ($validation) {
+                $pseudo = $_POST['pseudo'];
+                $email = $_POST['email'];
+                $passwordRegister = $_POST['passwordRegister'];
+    
+                $register = new \Projet\models\FrontManager();
+                $register->registerUsers($pseudo,$email,$passwordRegister);
+        
+                
+                unset($_POST['pseudo']);
+                unset($_POST['email']);
+                unset($_POST['password']);
             }
         }
     
-        else if ($validation) {
-            $pseudo = $_POST['pseudo'];
-            $email = $_POST['email'];
-            $passwordRegister = $_POST['passwordRegister'];
+    
+    
+        require 'app/views/FrontEnd/home.php';
+    }
 
-            $register = new \Projet\models\FrontManager();
-            $register->registerUsers($pseudo,$email,$passwordRegister);
-    
-            
-            // unset($_POST['pseudo']);
-            // unset($_POST['email']);
-            // unset($_POST['password']);
+    //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE 
+
+     function loginUsers() {
+        extract($_POST);
+        $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
+
+        $loginUsers = new \Projet\models\FrontManager();
+        $login = $login->UsersLogin($connectName,$connectPassword);
+
+        if(password_verify($connectPassword, $login['password'])){
+            $_SESSION['user'] = $login['id'];
+            require 'app/views/front/account.php';
+        }else{
+            return $error;
         }
-    
-        return $errors;
     }
     
     
