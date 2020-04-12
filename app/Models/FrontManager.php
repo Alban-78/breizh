@@ -54,4 +54,16 @@ class FrontManager extends Manager{
         return $pseudoCheck;
     }
 
+     //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE
+     
+     public function usersLogin($connectName,$connectPassword) {
+
+        $bdd = $this->dbConnect();
+        $login = $bdd->prepare('SELECT id, password FROM users WHERE pseudo = ?');
+        $login->execute([$connectName,$connectPassword]);
+        $login = $login->fetch();
+
+        return $login;
+    }
+
 }

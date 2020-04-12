@@ -29,8 +29,8 @@ try {
             $controllerFront->trip();
         }
 
-        else if($_GET['action'] == 'connect') {
-            $controllerFront->connect();
+        else if($_GET['action'] == 'login') {
+            $controllerFront->loginUsers();
         }
 
         else if($_GET['action'] == 'plan') {
@@ -40,6 +40,19 @@ try {
         else if($_GET['action'] == 'mention') {
             $controllerFront->mention();
         }
+
+        else if($_GET['action'] == 'register') {
+            $controllerFront->registerUser();
+        }
+
+        else if($_GET['action'] == 'contact') {
+            $controllerFront->contact();
+        }
+
+        else if($_GET['action'] == 'account') {
+            $controllerFront->account();
+        }
+
 
 
     }else{

@@ -1,8 +1,8 @@
 <?php
-if (!empty($_POST)) {
-    $registerS = new Projet\Controllers\ControllerFront();
-    $errors = $registerS->registerUser();
-}
+// if (!empty($_POST)) {
+//     $registerS = new Projet\Controllers\ControllerFront();
+//     $errors = $registerS->registerUser();
+// }
 ?>
 <body>
     <header>
@@ -20,7 +20,7 @@ if (!empty($_POST)) {
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="index.php?action=food">Excursions culinaires</a></li>
                 <li><a href="index.php?action=trip">Circuits</a></li>
-                <li><a href="index.php?action=connect">Se connecter</a></li>
+                <li><a href="index.php?action=login">Se connecter</a></li>
                 <li><a href="#modal1" class="js-modal">S'inscrire</a></li>
 
                 <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
@@ -29,7 +29,7 @@ if (!empty($_POST)) {
                        <button class="js-modal-close">Fermer</button>
                     <h1 id="titlemodal">INSCRIPTION</h1>
             
-                <form name="mon-formulaire1" method="post" action="">
+                <form name="mon-formulaire1" method="post" action="index.php?action=register">
         <?php
         if(isset($errors)) :
         if($errors) :
@@ -85,11 +85,7 @@ if (!empty($_POST)) {
                 Confirmation de votre Mot de Passe :<br />
                   <input id="passwordConfRegister" type="password" name="passwordConfRegister" value="<?php if(isset($_POST["passwordConfRegister"]))echo $_POST["passwordConfRegister"] ?>" />
              </p>
-             <?= var_dump($_POST["pseudo"]);
-                var_dump($_POST["email"]);
-                var_dump($_POST["passwordRegister"]);
-                var_dump($_POST["passwordConfRegister"]);
-                var_dump($registerS) ?>
+             
              <br>
              <p>
                  <input type="submit" value="Envoyer" />

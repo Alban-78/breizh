@@ -2,10 +2,10 @@
 
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-if(!empty($_POST)){
-    $contact = new Projet\Controllers\ControllerFront();
-    $errors = $contact->contact();
-}
+// if(!empty($_POST)){
+//     $contact = new Projet\Controllers\ControllerFront();
+//     $errors = $contact->contact();
+// }
 
 ?>
 
@@ -86,7 +86,7 @@ if(!empty($_POST)){
                 mesure.</p>
         </div>
         
-        <form method="post" action="">
+        <form method="post" action="index.php?action=contact">
         <?php
         if(isset($errors)) :
         if($errors) :
