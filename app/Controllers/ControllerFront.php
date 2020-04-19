@@ -30,7 +30,6 @@ class ControllerFront {
         require 'app/views/FrontEnd/login.php';
     }
 
-
     function mention(){
 
         require 'app/views/FrontEnd/mentionslegales.php';
@@ -150,20 +149,38 @@ class ControllerFront {
 
     //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE 
 
-     function loginUsers() {
+     function userLogin() {
         extract($_POST);
         $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
 
-        $loginUsers = new \Projet\models\FrontManager();
-        $login = $login->UsersLogin($connectName,$connectPassword);
+        $login = new \Projet\models\FrontManager();
+        $login = $login->login($connectName,$connectPassword);
 
         if(password_verify($connectPassword, $login['password'])){
             $_SESSION['user'] = $login['id'];
-            require 'app/views/front/account.php';
+            $this->account();
+            header('Location: index.php?action=account');
         }else{
             return $error;
         }
     }
+
+    //PERMET A L'UTILISATEUR DE SE DECONNECTER DE SON ESPACE 
+
+     function userLogout(){
+        unset($_SESSION["user"]);
+        session_destroy();
+        $this->home();
+    }
+
+
+    //PERMET A L'UTILISATEUR DE VOIR SES INFOS
+
+     function infos() {
+     $usersInfo = new \Projet\models\FrontManager();
+     $infos = $usersInfo->usersInfo();
+     return $infos;
+}
     
     
 }

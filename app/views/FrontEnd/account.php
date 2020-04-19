@@ -1,11 +1,17 @@
 <?php
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-
 ?>
-<section class="randoshare">
-<h1>BIENVENUE SUR VOTRE ESPACE <?= $infos['pseudo']?></h1>
 
+<?php 
+$usersInfo = new \Projet\controllers\ControllerFront();
+$infos = $usersInfo->infos();
+?>
+
+<section class="randoshare">
+
+<h1>BIENVENUE SUR VOTRE ESPACE <?= $infos ?> !</h1>
+  
 <div class="boussole"><img src="app/public/Images/boussole.png"></div>
 
 <a href="index.php?action=trip"><h3>PARTAGEZ VOS CIRCUITS DE RANDO</h3></a>

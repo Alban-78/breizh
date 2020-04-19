@@ -56,14 +56,26 @@ class FrontManager extends Manager{
 
      //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE
      
-     public function usersLogin($connectName,$connectPassword) {
-
+    public function login($connectName,$connectPassword) {
         $bdd = $this->dbConnect();
-        $login = $bdd->prepare('SELECT id, password FROM users WHERE pseudo = ?');
-        $login->execute([$connectName,$connectPassword]);
+        $login = $bdd->prepare('SELECT id, password FROM register WHERE pseudo = ?');
+        $login->execute([$connectName]);
         $login = $login->fetch();
 
         return $login;
     }
 
+
+   //RECUPERE LES INFORMATIONS DE L'UTILISATEUR
+   
+    public function usersInfo() {
+        $bdd = $this->dbConnect();
+        $infos = $bdd->prepare('SELECT id, email, pseudo FROM users WHERE id = ? ');
+        $infos->execute([$_SESSION['user']]);
+        $infos = $infos->fetch();
+        return $infos;
 }
+}
+
+
+
