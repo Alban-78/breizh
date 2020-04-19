@@ -30,7 +30,7 @@ try {
         }
 
         else if($_GET['action'] == 'login') {
-            $controllerFront->loginUsers();
+            $controllerFront->login();
         }
 
         else if($_GET['action'] == 'plan') {
@@ -51,6 +51,10 @@ try {
 
         else if($_GET['action'] == 'account') {
             $controllerFront->account();
+        }
+
+        else if($_GET['action'] == 'disconnect') {
+            $controllerFront->userLogout();
         }
 
 

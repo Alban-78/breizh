@@ -1,7 +1,10 @@
 <?php
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-
+if(!empty($_POST)){
+    $login = new \Projet\controllers\ControllerFront();
+    $error = $login->userLogin();
+}
 ?>
 
 
@@ -9,48 +12,23 @@ include_once "app/views/FrontEnd/layouts/header.php";
     <div class="titre-connect">
 <h1>SE CONNECTER</h1>
     </div>    
-<form class="connect" action="index.php?action=login" method="post">
+<form class="login" action="" method="post">
 
-<?php
-        if(isset($errors)) :
-        if($errors) :
-        foreach($errors as $error) :
-        ?>
-
-            <div class="row">
-                <div>
-                    <div class="message erreur"><?= $error ?></div>
-                </div>
-            </div>
-
-            <?php
-             endforeach;
-             else :
-            ?>
-
-<div class="row">
-                <div>
-                    <div class="message confirmation">Vous ête connecter !</div>
-                </div>
-            </div>
-
-
-            <?php
-            endif;
-            endif
-            ?>
+<?php if(isset($error)) : ?>
+    <?= $error ?>
+<?php endif ?>
 
 <fieldset>
     <legend>Votre Compte</legend>
     <div class="colonne">
         
 
-        <p><label for="name">Votre Nom:</label>
-            <input type="text" name="name" id="connectName" placeholder="Votre Nom" value="<?php if(isset($_POST["connectName"]))echo $_POST["connectName"] ?>></p>
+        <p><label for="connectName">Votre Nom:</label>
+            <input type="text" name="connectName" id="connectName" placeholder="Votre Nom" value="<?php if(isset($_POST["connectName"]))echo $_POST["connectName"] ?>"></p>
 
 
-        <p><label for="password">Votre Mot de passe:</label>
-            <input type="text" name="password" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["connectPassword"]))echo $_POST["connectPassword"] ?>></p>
+        <p><label for="connectPassword">Votre Mot de passe:</label>
+            <input type="text" name="connectPassword" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["connectPassword"]))echo $_POST["connectPassword"] ?>"></p>
 
 
         

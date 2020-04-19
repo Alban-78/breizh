@@ -20,9 +20,13 @@
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="index.php?action=food">Excursions culinaires</a></li>
                 <li><a href="index.php?action=trip">Circuits</a></li>
+                <?php if(isset($_SESSION['user'])) : ?>
+                <li><a href="index.php?action=account">Mon compte</a></li>
+                <li><a href="index.php?action=disconnect">Se déconnecter</a></li>
+                <?php else : ?>
                 <li><a href="index.php?action=login">Se connecter</a></li>
                 <li><a href="#modal1" class="js-modal">S'inscrire</a></li>
-
+                <?php endif ; ?>
                 <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
 
                    <div class="modal-wrapper js-modal-stop">
