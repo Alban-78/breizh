@@ -14,6 +14,7 @@
     <link href="app/public/css/plan.css" rel="stylesheet">
     <link href="app/public/css/account.css" rel="stylesheet">
     <link href="app/public/css/mentions.css" rel="stylesheet">
+    <link href="app/public/css/page404.css" rel="stylesheet">
     <link href="app/public/css/mobile.css" rel="stylesheet">
     <link href="app/public/css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
