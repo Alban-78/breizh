@@ -33,6 +33,10 @@ try {
             $controllerFront->login();
         }
 
+        else if($_GET['action'] == 'page404') {
+            $controllerFront->page404();
+        }
+
         else if($_GET['action'] == 'plan') {
             $controllerFront->plan();
         }

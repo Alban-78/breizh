@@ -45,6 +45,11 @@ class ControllerFront {
         require 'app/views/FrontEnd/account.php';
     }
 
+    function page404(){
+
+        require 'app/views/FrontEnd/page404.php';
+    }
+
 
 
      //PERMET DE PRENDRE CONTACT AVEC L'ADMIN
