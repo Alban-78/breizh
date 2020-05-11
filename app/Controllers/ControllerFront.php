@@ -50,6 +50,17 @@ class ControllerFront {
         require 'app/views/FrontEnd/page404.php';
     }
 
+    function pageDeleteUsers() {
+
+        require 'app/views/FrontEnd/deleteUsers.php';
+    }
+
+    function modifyPassword() {
+
+        require 'app/views/FrontEnd/modifyPassword.php';
+    }
+
+
 
 
      //PERMET DE PRENDRE CONTACT AVEC L'ADMIN
@@ -155,22 +166,25 @@ class ControllerFront {
     //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE 
 
      function userLogin() {
+        
         extract($_POST);
         $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
 
         $login = new \Projet\models\FrontManager();
-        $login = $login->login($connectName,$connectPassword);
+        $login = $login->login($connectName);
 
         if(password_verify($connectPassword, $login['password'])){
             $_SESSION['user'] = $login['id'];
+            $_SESSION['pseudo'] = $login['pseudo'];
+            var_dump($_SESSION['user']);
             $this->account();
-            header('Location: index.php?action=account');
+            // header('Location: index.php?action=account');
         }else{
             return $error;
         }
     }
 
-    //PERMET A L'UTILISATEUR DE SE DECONNECTER DE SON ESPACE 
+    //PERMET A L'UTILISATEUR DE SE DECONNECTER DE SON ESPACE MEMBRE
 
      function userLogout(){
         unset($_SESSION["user"]);
@@ -186,6 +200,54 @@ class ControllerFront {
      $infos = $usersInfo->usersInfo();
      return $infos;
 }
+
+
+    //PERMET A L'UTILISATEUR DE SUPPRIMER SON ESPACE MEMBRE
+
+    function deleteUsers() {
+        $users = new \Projet\models\FrontManager();
+        $id = $_SESSION['user'];
+        $usersDelete = $users->deleteUsers($id);
+        unset($_SESSION['user']);
+        session_destroy();
+        require 'app/views/Frontend/home.php';
+    }
+
+     //PERMET A L'UTILISATEUR DE MODIFIER SON MOT DE PASSE
+
+    function changePassword() {
+        if(isset($_SESSION['user'])) {
+            extract($_POST);
+            $validation = true;
+            $errors = [];
+        
+            if(empty($password) || empty($newPassword) || empty($verifyNewPassword)){
+                $validation = false;
+                $errors[] = 'Tous les champs sont obligatoires !!!'; 
+            }
+
+            if($verifyNewPassword != $newPassword){
+                $validation = false;
+                $errors[] = 'le mot de passe de confirmation est incorrect !!!';
+            }
+
+            if(!empty($password)) {
+                $testPassword = new \Projet\models\FrontManager();
+                $passwordCheck = $testPassword->passwordCheck();
+                if($passwordCheck === $password) {
+                    $validation = false;
+                    $errors[] = "Ce mot de passe n'est pas le bon !";
+                }
+            }
+
+            if($validation){
+                $changePassword = new \Projet\models\FrontManager();
+                $passwordchange = $changePassword->changeUsersPassword($newPassword);
+                require 'app/views/Frontend/modifyPassword.php';
+            }
+            return $errors;
+        }    
+    }
     
     
 }

@@ -9,6 +9,8 @@
     <meta name="keywords" content="tro vale breizh, randonnée">
     <link href="app/public/css/heritage.css" rel="stylesheet">
     <link href="app/public/css/food.css" rel="stylesheet">
+    <link href="app/public/css/cookie.css" rel="stylesheet">
+    <link href="app/public/css/modifypassword.css" rel="stylesheet">
     <link href="app/public/css/login.css" rel="stylesheet">
     <link href="app/public/css/slider.css" rel="stylesheet">
     <link href="app/public/css/plan.css" rel="stylesheet">

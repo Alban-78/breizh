@@ -1,9 +1,10 @@
 <?php
-//Important pour la sécurité de vos scripts : les sessions
-//Démarre une session
+//IMPORTANT POUR LA SECURITE DE VOS SCRIPTS : LES SESSIONS
+
+//DEMARRE UNE SESSION
 session_start();
 
-// autoload.php génère avec composer
+//AUTOLOAD.PHP GENERE AVEC COMPOSER
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -61,8 +62,22 @@ try {
             $controllerFront->userLogout();
         }
 
+        else if($_GET['action'] == 'deleteUsers') {
+            $controllerFront->pageDeleteUsers();
+        }
+
+        elseif ($_GET['action'] == 'changePassword') {
+            $controllerFront -> changePassword();
+        }
+
+        elseif ($_GET['action'] == 'modifyPassword') {
+            $controllerFront -> modifyPassword();
+        }
 
 
+        
+
+   
     }else{
         $controllerFront->home();
     }

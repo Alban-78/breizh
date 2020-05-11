@@ -56,12 +56,12 @@ class FrontManager extends Manager{
 
      //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE
      
-    public function login($connectName,$connectPassword) {
+    public function login($connectName) {
+        
         $bdd = $this->dbConnect();
-        $login = $bdd->prepare('SELECT id, password FROM register WHERE pseudo = ?');
+        $login = $bdd->prepare('SELECT * FROM register WHERE pseudo = ?');
         $login->execute([$connectName]);
         $login = $login->fetch();
-
         return $login;
     }
 
@@ -70,11 +70,34 @@ class FrontManager extends Manager{
    
     public function usersInfo() {
         $bdd = $this->dbConnect();
-        $infos = $bdd->prepare('SELECT id, email, pseudo FROM users WHERE id = ? ');
+        $infos = $bdd->prepare('SELECT id, pseudo, password FROM register WHERE id = ? ');
         $infos->execute([$_SESSION['user']]);
         $infos = $infos->fetch();
         return $infos;
 }
+
+   // PERMET A L'UTILISATEUR DE SUPPRIMER SON COMPTE
+
+    public function deleteUsers($id) {
+        $bdd = $this->dbConnect();
+        $id = (int)$_GET['id'];
+        $usersDelete = $bdd->prepare('DELETE FROM register WHERE  id = ?');
+        $usersDelete->execute([$id]);
+        return $usersDelete;
+}
+
+    // PERMET A L'UTILISATEUR DE MODIFIER SON MOT DE PASSE
+
+    public function changeUsersPassword($newPassword) {
+        $bdd = $this->dbConnect();
+        $changePassword = $bdd->prepare('UPDATE FROM register SET password = :password WHERE id = :id');
+        $changePassword->execute([
+            'password' =>  password_hash($newPassword, PASSWORD_DEFAULT),
+            'id' => $_SESSION['user']
+        ]);
+        return $changePassword;
+    }
+
 }
 
 

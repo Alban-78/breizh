@@ -10,6 +10,18 @@ include_once "app/views/FrontEnd/layouts/header.php";
 ?>
 
 <main>
+
+<div id="cookie-bar">
+        <div class="cookie">
+            Ce site web utlilise des cookies pour personnaliser le contenu et pour analyser notre trafic. 
+            En utilisant ce site, vous acceptez notre utilisation des cookies. 
+            Vous pouvez refusez 
+            <button id='nocookie'>en cliquant ici</button>
+            Si ce n'est pas le cas, cliquez ici : 
+            <button id="cookieok">J'accepte</button>
+        </div>
+    </div>		
+
 <section id="main-image" alt="ploumanach">
         <div class="paper">
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
@@ -33,15 +45,15 @@ include_once "app/views/FrontEnd/layouts/header.php";
                 <li id="stage-2">
                     <img src="app/public/Images/korrigantableau.jpg" alt="korrigan">
                     <h4>Organiser</h4>
-                    <p>Bénéficiez de l’expertise de nos spécialistes de chaque destination, ils vous accompagnent dans
-                        la réalisation de votre voyage.</p>
+                    <p>Bénéficiez de l’expertise de nos abonnés pour toute sorte de circuits, ils vous conseille et vous oriente dans
+                        la réalisation de votre randonnée.</p>
                 </li>
 
                 <li id="stage-3">
                     <img src="app/public/Images/korrigantableauprofil.jpg" alt="korrigan">
                     <h4>Voyager</h4>
-                    <p>Nous nous chargeons d’assurer votre sécurité et de veiller à votre pleine sérénité tout au long
-                        de votre voyage.</p>
+                    <p>Nous nous assurons de veiller à votre pleine sérénité tout au long
+                        de votre périple.</p>
 
                 </li>
                 <div class="clear"></div>
@@ -54,7 +66,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
             <article style="background-image: url(app/public/Images/pharepetitminou.jpg);" alt="phare-du-petit-minou">
                 <div class="cover">
                     <h4>Partez en famille</h4>
-                    <p><small>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux !</small></p>
+                    <p><small>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux sur les sentions Bretons!</small></p>
                     <a href="#" class="button-2">Plus d'infos</a>
                 </div>
 
@@ -65,7 +77,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
             <article style="background-image: url(app/public/Images/quiberon2.jpg);" alt="côte-sauvage-de-quiberon">
                 <div class="cover">
                     <h4>Envie de s'evader</h4>
-                    <p><small>Parfois un peu d’évasion serait le bienvenue et ferait le plus grand bien !
+                    <p><small>Profitez de l'évasion et du bien-être que peut procurer le grand air et la nature qu'offre la Bretagne !
 
                         </small></p>
                     <a href="#" class="button-2">Plus d'infos</a>
@@ -80,17 +92,17 @@ include_once "app/views/FrontEnd/layouts/header.php";
     <section id="contact">
         <div class="paper">
             <h3>Contactez-Nous</h3>
-            <p>Chez Tro-Vale Breizh nous savons que voyager est une aventure humaine mais également un engagement
-                financier important pour vous. C’est pourquoi nous mettons un point d’honneur à prendre en compte
-                chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur
+            <p>Chez Tro-Vale Breizh nous savons que la randonnée est une aventure humaine unique mais également un engagement
+                personnel important pour vous. C’est pourquoi nous mettons un point d’honneur à prendre en compte
+                chacune de vos attentes pour vous aider dans la préparation de votre périple avec des circuits sur
                 mesure.</p>
         </div>
         
         <form method="post" action="index.php?action=contact">
         <?php
-        if(isset($errors)) :
-        if($errors) :
-        foreach($errors as $error) :
+        if (isset($errors)) :
+        if ($errors) :
+        foreach ($errors as $error) :
         ?>
 
             <div class="row">
@@ -117,17 +129,25 @@ include_once "app/views/FrontEnd/layouts/header.php";
             endif
             ?>
             <label for="contactName">Nom</label>
-            <input type="text" name="name" id="contactName" placeholder="Votre Nom" value="<?php if(isset($_POST["name"]))echo $_POST["name"] ?>">
+            <input type="text" name="name" id="contactName" placeholder="Votre Nom" value="<?php if (isset($_POST["name"])) {
+                echo $_POST["name"];
+            } ?>">
 
             <label for="contactEmail">Email</label>
-            <input type="text" name="email" id="contactEmail" placeholder="Votre Email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>">
+            <input type="text" name="email" id="contactEmail" placeholder="Votre Email" value="<?php if (isset($_POST["email"])) {
+                echo $_POST["email"];
+            } ?>">
             
             <label for="contactObjet">Objet:</label>
-            <input type="text" name="objet" id="contactObjet" placeholder="Objet Message" value="<?php if(isset($_POST["objet"]))echo $_POST["objet"] ?>">
+            <input type="text" name="objet" id="contactObjet" placeholder="Objet Message" value="<?php if (isset($_POST["objet"])) {
+                echo $_POST["objet"];
+            } ?>">
             
               <br><br><br>
             <p><label for="contactMessage">Votre Message:</label> </p>
-                <p><textarea rows="10" cols="80" name="content" id="contactMessage" placeholder="votre message" value="<?php if(isset($_POST["content"]))echo $_POST["content"] ?>"></textarea></p>
+                <p><textarea rows="10" cols="80" name="content" id="contactMessage" placeholder="votre message" value="<?php if (isset($_POST["content"])) {
+                echo $_POST["content"];
+            } ?>"></textarea></p>
                
             <input type="submit" value="OK" class="button-3">
 
@@ -136,6 +156,6 @@ include_once "app/views/FrontEnd/layouts/header.php";
     </section>
     </main>
 
-    <?php 
+    <?php
     include_once 'app/views/FrontEnd/layouts/footer.php';
     ?>
