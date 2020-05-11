@@ -10,7 +10,8 @@ $infos = $usersInfo->infos();
 
 <section class="randoshare">
 
-<h1>BIENVENUE SUR VOTRE ESPACE <?= $infos ?> !</h1>
+<h1>BIENVENUE SUR VOTRE ESPACE <?= $_SESSION['pseudo'] ?> !</h1>
+
   
 <div class="boussole"><img src="app/public/Images/boussole.png"></div>
 
@@ -30,7 +31,13 @@ $infos = $usersInfo->infos();
 
 </section>
 
+<div class="button-4">
+<a href="index.php?action=modifyPassword">MODIFIER MON MOT DE PASSE</a>
+</div>
 
+<div class="button-4">
+<a href="index.php?action=deleteUsers&id=<?=$infos['id'] ?>">SUPPRIMER MON COMPTE</a>
+</div>
 
 
 <?php 

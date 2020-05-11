@@ -54,3 +54,15 @@
 	-webkit-transform: rotate(0) scale(1);
 	transform: rotate(0) scale(1);
 }
+
+.button-4{
+    
+    font-size: 20px;
+    font-weight: bold;
+    padding: 11px;
+    border-bottom-style: none;
+    border-radius: 3px;
+    margin-left: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

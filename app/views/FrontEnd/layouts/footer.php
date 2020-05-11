@@ -21,7 +21,9 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app/public/js/modal.js"></script>
+    <script src="app/public/js/cookie.js"></script>
     <script src="app/public/js/slider.js"></script>
+    <script src="app/public/js/cartealacarte.js"></script>
     
 
 </body>
