@@ -9,7 +9,7 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
 try {
-    $controllerFront = new \Projet\Controllers\ControllerFront(); //Objet controler
+    $controllerFront = new \Projet\Controllers\ControllerFront(); //OBJET CONTROLLER
 
     if (isset($_GET['action'])) {
 
@@ -63,7 +63,7 @@ try {
         }
 
         else if($_GET['action'] == 'deleteUsers') {
-            $controllerFront->pageDeleteUsers();
+            $controllerFront->deleteUsers();
         }
 
         elseif ($_GET['action'] == 'changePassword') {
@@ -73,6 +73,12 @@ try {
         elseif ($_GET['action'] == 'modifyPassword') {
             $controllerFront -> modifyPassword();
         }
+
+        elseif ($_GET['action'] == 'connected') {
+            $controllerFront -> userLogin();
+        }
+
+
 
 
         

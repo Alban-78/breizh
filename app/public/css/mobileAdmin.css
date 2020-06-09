@@ -1,0 +1,78 @@
+/*-----MEDIAQUERIES------*/
+/*------PAGE D'ACCUEIL-----*/
+@media screen and (max-width:860px) {
+
+    body {
+        max-width: 860px;
+    }
+
+    .title  {
+
+        position: relative;
+        left: 650px;
+        text-align: center;
+
+    }
+
+    h3 {
+        margin-left: 600px;
+        padding-top: 100px;
+        display: inline-block;
+    }
+
+    h1{
+        margin-left: 600px; 
+        display: inline-block;
+    }
+
+
+    .drapeau {
+        display: none;
+    }
+
+    fieldset {
+        margin-left: 650px;
+        border: none;
+    }
+
+   
+
+    footer {
+        width: 400%;
+
+}
+
+   footer .paper {
+   text-align: center;
+   margin-left: -10px;
+}
+
+  footer .copyright{
+      margin-right: -570px;
+  }
+
+  .addAdmin{
+    margin-left: 400px;
+    padding-top: 100px;
+    display: inline-block;
+    
+}
+
+.admin-management{
+    margin-left: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

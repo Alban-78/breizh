@@ -19,12 +19,12 @@ if(!empty($_POST)){
             <h3>Votre Mot de Passe a été modifier<h3>
                         
             <?php endif; endif ?>
-                <label from="oldPassword">Taper votre ancien mot de passe</label>
-                <input id="oldPassword" name="password" type="password" placeholder="Votre ancien mot de passe">   
-                <label from="newPassword">Taper votre nouveau mot de passe</label>
-                <input id="newPassword" name="newPassword" type="password" placeholder="Votre nouveau mot de passe">
-                <label from="verifyNewPassword">Confirmer votre nouveau mot de passe</label>
-                <input id="verifyNewPassword" name="verifyNewPassword" type="password" placeholder="Confirmer le mot de passe">
+                <label from="oldPassword">Taper votre ancien mot de passe</label><br><br>
+                <input id="oldPassword" name="password" type="password" placeholder="Ancien mot de passe"><br><br>
+                <label from="newPassword">Taper votre nouveau mot de passe</label><br><br>
+                <input id="newPassword" name="newPassword" type="password" placeholder="Nouveau mot de passe"><br><br>
+                <label from="verifyNewPassword">Confirmer votre nouveau mot de passe</label><br><br>
+                <input id="verifyNewPassword" name="verifyNewPassword" type="password" placeholder="Confirmer le mot de passe"><br><br>
                 <div class="buttonSettings">
                     <button type="submit">Modifier</button>
                     <button type="reset">Annuler</button>

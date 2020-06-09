@@ -1,12 +1,14 @@
 $(function() {
 
-    //configuration
+    //CONFIGURATION
+    
     let width = 720;
     let animationSpeed = 1000;
     let pause = 3000;
     let currentSlide = 1;
 
-    //cache DOM
+    //CACHE DOM
+
     let $slider = $('#slider');
     let $slideContainer = $slider.find('.slides');
     let $slides = $slideContainer.find('.slide');

@@ -31,12 +31,11 @@ $infos = $usersInfo->infos();
 
 </section>
 
-<div class="button-4">
-<a href="index.php?action=modifyPassword">MODIFIER MON MOT DE PASSE</a>
-</div>
+
 
 <div class="button-4">
-<a href="index.php?action=deleteUsers&id=<?=$infos['id'] ?>">SUPPRIMER MON COMPTE</a>
+<a href="index.php?action=deleteUsers&id=<?=$infos['id'] ?>"><h4>SUPPRIMER MON COMPTE</h4></a><br><br>
+<a href="index.php?action=modifyPassword"><h4>MODIFIER MON MOT DE PASSE</h4></a>
 </div>
 
 
