@@ -1,0 +1,21 @@
+h3{
+    text-align: center;
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.connectAdmin fieldset{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    
+   
+}
+
+.connectAdmin p{
+   padding-top: 30px;
+   margin-bottom: 25px;
+}

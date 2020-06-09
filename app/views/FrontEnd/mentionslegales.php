@@ -10,6 +10,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
             <h2>Bienvenue en<br><strong>Bretagne</strong></h2>
             <a href="index.php?action=trip" class="button-1">Randonnée</a>
         </div>
+</section>
 
 
  <div class="container-mentions">  

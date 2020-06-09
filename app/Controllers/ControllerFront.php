@@ -12,6 +12,9 @@ class ControllerFront {
 
     function heritage(){
         
+         $allArticles  = new \Projet\Models\FrontManager();
+         $articles = $allArticles->articles();
+        
         require 'app/views/FrontEnd/patrimoine.php';
     }
 
@@ -104,7 +107,8 @@ class ControllerFront {
             $contactManager = new \Projet\Models\FrontManager();
             $contactManager->contact($name,$email,$objet,$content);
         }
-        require 'app/views/FrontEnd/home.php';
+      
+        $this->home();
        
     }
 
@@ -129,7 +133,7 @@ class ControllerFront {
         }
     
     
-        else if ($passwordConfRegister != $passwordRegister) {
+        else if ($passwordConfRegister != $password) {
             $validation = false;
             $errors[] = "Le mot de passe de confirmation est incorrect !";
         }
@@ -160,7 +164,8 @@ class ControllerFront {
     
     
     
-        require 'app/views/FrontEnd/home.php';
+        
+        $this->home();
     }
 
     //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE 
@@ -176,7 +181,7 @@ class ControllerFront {
         if(password_verify($connectPassword, $login['password'])){
             $_SESSION['user'] = $login['id'];
             $_SESSION['pseudo'] = $login['pseudo'];
-            var_dump($_SESSION['user']);
+            
             $this->account();
             // header('Location: index.php?action=account');
         }else{
@@ -210,7 +215,7 @@ class ControllerFront {
         $usersDelete = $users->deleteUsers($id);
         unset($_SESSION['user']);
         session_destroy();
-        require 'app/views/Frontend/home.php';
+        $this->home();
     }
 
      //PERMET A L'UTILISATEUR DE MODIFIER SON MOT DE PASSE
@@ -220,6 +225,7 @@ class ControllerFront {
             extract($_POST);
             $validation = true;
             $errors = [];
+            
         
             if(empty($password) || empty($newPassword) || empty($verifyNewPassword)){
                 $validation = false;
@@ -232,18 +238,22 @@ class ControllerFront {
             }
 
             if(!empty($password)) {
+                $id = $_SESSION['user'];
                 $testPassword = new \Projet\models\FrontManager();
-                $passwordCheck = $testPassword->passwordCheck();
-                if($passwordCheck === $password) {
+                $passwordCheck = $testPassword-> passwordCheck();
+                if(!password_verify($password, $passwordCheck)) {
                     $validation = false;
                     $errors[] = "Ce mot de passe n'est pas le bon !";
                 }
             }
+            // if(isset($errors)){
+            //     require 'app/views/Frontend/modifyPassword.php';
+            // }
 
             if($validation){
                 $changePassword = new \Projet\models\FrontManager();
                 $passwordchange = $changePassword->changeUsersPassword($newPassword);
-                require 'app/views/Frontend/modifyPassword.php';
+                $this->modifyPassword();
             }
             return $errors;
         }    

@@ -2,10 +2,7 @@
 
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-// if(!empty($_POST)){
-//     $contact = new Projet\Controllers\ControllerFront();
-//     $errors = $contact->contact();
-// }
+// echo (password_hash('Kercode', PASSWORD_DEFAULT));
 
 ?>
 
@@ -67,7 +64,6 @@ include_once "app/views/FrontEnd/layouts/header.php";
                 <div class="cover">
                     <h4>Partez en famille</h4>
                     <p><small>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux sur les sentions Bretons!</small></p>
-                    <a href="#" class="button-2">Plus d'infos</a>
                 </div>
 
             </article>
@@ -77,10 +73,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
             <article style="background-image: url(app/public/Images/quiberon2.jpg);" alt="côte-sauvage-de-quiberon">
                 <div class="cover">
                     <h4>Envie de s'evader</h4>
-                    <p><small>Profitez de l'évasion et du bien-être que peut procurer le grand air et la nature qu'offre la Bretagne !
-
-                        </small></p>
-                    <a href="#" class="button-2">Plus d'infos</a>
+                    <p><small>Profitez de l'évasion et du bien-être que peut procurer le grand air et la nature qu'offre la Bretagne !</small></p>
                 </div>
 
             </article>

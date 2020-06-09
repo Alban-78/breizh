@@ -42,3 +42,10 @@ php -S localhost:3000
 ### Autheur
 
 HUSAR Alban
+
+
+### Page à terminer
+
+*Pouvoir ajouter des Administrateurs 
+*Gérer les messages des utilisateurs
+

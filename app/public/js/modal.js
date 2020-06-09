@@ -3,6 +3,8 @@ const focusableSelector = 'button, a, input'
 let focusables = []
 let previouslyFocusedElement = null
 
+//PERMET D'OUVRIR LA BOITE MODAL
+
 const openModal = function (e) {
     e.preventDefault()
     modal = document.querySelector(e.target.getAttribute('href'))
@@ -16,6 +18,7 @@ const openModal = function (e) {
     modal.querySelector('.js-modal-close').addEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').addEventListener('click', stopPropagation)
 }
+//PERMET DE FERMER LA BOITE MODAL
 
 const closeModal = function (e) {
     if (modal === null) return
@@ -37,10 +40,12 @@ const closeModal = function (e) {
     
     
 }
+//PERMET D'EMPECHER LA FERMETURE DE LA BOITE MODAL QUAND ON CLIQUE DEDANS
 
 const stopPropagation = function (e) {
     e.stopPropagation()
 }
+//PERMET DE REPERER LES ELEMENTS ET DE SE FOCALISER DESSUS DANS LA BOITE MODAL
 
 const focusInModal = function (e) {
     e.preventDefault()
@@ -58,11 +63,13 @@ const focusInModal = function (e) {
     }
     focusables[index].focus()
 }
+//PERMET DE SELECTIONNER TOUS LES ELEMENTS QUI ONT LA CLASS JS-MODAL
 
 document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal)
     
 })
+//PERMET DE FERMER LA BOITE MODAL EN APPUYANT SUR LA TOUCHE ECHAP
 
 window.addEventListener('keydown', function (e) {
     if (e.key === "Escape" || e.key === "Esc") {

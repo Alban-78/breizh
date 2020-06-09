@@ -9,7 +9,7 @@
    
     .title {
         position: relative;
-        left: 400px;
+        left: 650px;
         text-align: center;
     }
 
@@ -17,6 +17,17 @@
         display: none;
     }
 
+    
+    .menuprincipal {
+        position: relative;
+    }
+
+    .menuprincipal ul li {
+        display: block;
+        margin-left: 100px;
+        margin-bottom: 20px;
+
+    }
 
     .menuprincipal {
 
@@ -47,8 +58,12 @@
 
     }
 
+    /*----EFFACER LA BARRE DE COOKIE----*/
 
-
+    #cookie-bar{
+        display: none;
+    }
+    
 
     /*----FAIT DISPARAITRE LE MAIN IMAGE EN RESPONSIVE----*/
     #main-image {
@@ -67,9 +82,9 @@
         display: none;
     }
 
-    /* #main-image5 {
+    #main-image5 {
         display: none;
-    } */
+    }
 
     #main-image6 {
         display: none;
@@ -81,7 +96,7 @@
         width: 60%;
         position: relative;
         margin: auto;
-        left: 350px;
+        left: 570px;
 
 
     }
@@ -90,20 +105,26 @@
         display: none;
     }
 
+    #contact .paper{
+        margin-left: 250px;
+    }
+
+
     #contact form {
         position: relative;
         margin: 0 auto;
-        left: 300px;
+        left: 600px;
         padding-top: 20px;
 
     }
 
     p textarea {
-        margin-left: -200px;
+        margin-left: -140px;
     }
 
     #contact label {
         display: none;
+        margin-left: 200px;
     }
 
     footer {
@@ -119,8 +140,29 @@
 
 
     /*----PAGE PATRIMOINE----*/
+  
+    .historic{
+        margin-top: 100px;
+        
 
-    .heritage h3 {
+    }
+
+    .historic article{
+        margin-right: 550px;
+    }
+
+    .historic h1{
+        margin-left: 570px;
+    }
+
+    .historic p{
+        margin-left: 570px;
+    }
+
+    .historic image{
+        margin-right: 550px;
+    }
+    /* .heritage h3 {
 
         margin-top: 70px;
     }
@@ -177,7 +219,7 @@
 
      /*----HISTORIC----*/
      
-    .solidor {
+     /* .solidor {
         margin-left: 30px;
     } 
 
@@ -185,7 +227,7 @@
 
     .vannes {
         margin-left: 30px;
-    } */
+    } 
 
 
 
@@ -196,16 +238,16 @@
 
     .concarneau {
         margin-left: 30px;
-    } */
+    } 
 
 
     .brest {
         margin-left: 30px;
-    } 
+    }  */
 
     /*----NATURAL----*/
 
-    .raz {
+    /* .raz {
         margin-right: 250px;
     }
 
@@ -270,7 +312,8 @@
     .capsizun h4 {
         width: 50%;
         margin-left: 60px;
-     } 
+     }  */ 
+    /*------PAGE CULINAIRE-----*/
 
      .titre-culinaire{
        display: inline-block;
@@ -310,26 +353,57 @@
     }
 
     /*----PAGE MENTIONS LEGALES----*/
-
-
-    #main-image5{
-        width: 100%;
-        position: fixed;
-       
-       
+    
+    .mentions{
+       margin-left: 600px;
+       display: inline-block;
+       margin-top: -100px;
     }
+
+   
 
 
    /*----PAGE PLAN DE SITE----*/
 
    .plandusite h3{
       display: flex;
-      margin-left: 450px;
+      margin-left: 700px;
       margin-top: 200px;
    }
    .index{
        display: inline-block;
-       margin-left: 450px;
+       margin-left: 700px;
    }
+
+
+     /*----PAGE ACCOUNT----*/
+
+     .randoshare{
+        margin-left: 650px;
+     }
+
+     .randoshare h1{
+         display: inline-block;
+         margin-top: 50px;
+         margin-left: -30px;
+     }
+
+     .randoshare .boussole{
+         margin-right: 10px;
+     }
+
+     .randoshare h3{
+         display: inline-block;
+     }
+
+     .randoshare .zoom{
+         margin-left: 100px;
+         margin-top: 30px;
+     }
+
+     .button-4{
+         display: inline-block;
+         margin-left: 650px;
+     }
 
 }

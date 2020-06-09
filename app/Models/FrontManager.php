@@ -90,13 +90,30 @@ class FrontManager extends Manager{
 
     public function changeUsersPassword($newPassword) {
         $bdd = $this->dbConnect();
-        $changePassword = $bdd->prepare('UPDATE FROM register SET password = :password WHERE id = :id');
+        $changePassword = $bdd->prepare('UPDATE register SET password = :password WHERE id = :id');
         $changePassword->execute([
             'password' =>  password_hash($newPassword, PASSWORD_DEFAULT),
             'id' => $_SESSION['user']
         ]);
-        return $changePassword;
+        return true;
     }
+
+    public function passwordCheck(){
+        $bdd = $this->dbConnect();
+        $passwordCheck = $bdd->prepare('SELECT password FROM register WHERE id = ?');
+        $passwordCheck->execute([$_SESSION['user']]);
+        $passwordCheck = $passwordCheck->fetch();
+        return $passwordCheck['password'];
+    }
+
+    public function articles() {
+        $bdd = $this->dbConnect();
+        $articles = $bdd->prepare('SELECT * FROM articles');
+        $articles->execute();
+        $articles = $articles->fetchAll();
+        return $articles;
+    }
+
 
 }
 

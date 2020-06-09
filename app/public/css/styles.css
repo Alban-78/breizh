@@ -100,12 +100,7 @@ header nav
     float: right;
     margin-top: 50px;
 }
-/*----------FAIRE DISPARAITRE LE BURGER----------*/
 
-.menuprincipal #menumobile,
-.menuprincipal .menumobile {
-    display: none;
-}
 
 header nav ul li
 {

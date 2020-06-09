@@ -1,16 +1,44 @@
 <?php
-//Important pour la sécurité de vos scripts : les sessions
-//Démarre une session
+//IMPORTANT POUR LA SECURITE DE VOS SCRIPTS : LES SESSIONS
+
+//DEMARRE UNE SESSION
 session_start();
 
-// autoload.php génère avec composer
+// AUTOLOAD.PHP GENERE AVEC COMPOSER
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 try {
-    $controllerBack = new \Projet\Controllers\ControllerBack(); //Objet controler
+    $controllerBack = new \Projet\Controllers\ControllerBack(); //OBJET CONTROLLER
 
     if (isset($_GET['action'])) {
+
+        if($_GET['action'] == 'connected'){
+            $controllerBack -> adminLogin();
+              
+        }
+
+        elseif($_GET['action'] == 'connected'){
+            $controllerBack -> addAdmin();
+              
+        }
+
+        elseif ($_GET['action'] == 'registerAdmin') {
+            $controllerBack -> registerAdmin();
+        }
+
+        elseif ($_GET['action'] == 'articles') {
+            $controllerBack -> articles();
+        }
+     
+        elseif ($_GET['action'] == 'newArticle') {
+            $controllerBack -> newArticle();
+        }
+
+        elseif ($_GET['action'] == 'deleteArticle') {
+            $controllerBack -> deleteArticle();
+        }
+
 
 
         
@@ -20,6 +48,6 @@ try {
         $controllerBack->login();
     }
 
-}catch (Exception $e) {
+} catch (Exception $e) {
     
 }

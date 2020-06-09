@@ -10,6 +10,12 @@ include_once "app/views/FrontEnd/layouts/header.php";
             <a href="index.php?action=trip" class="button-1">Randonnée</a>
         </div>
     </section>
+ 
+ <section class="map">
+ <div class="sharemap">
+ 
+ </div>
+ </section>
 
 
 

@@ -1,10 +1,10 @@
 <?php
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-if(!empty($_POST)){
-    $login = new \Projet\controllers\ControllerFront();
-    $error = $login->userLogin();
-}
+// if(!empty($_POST)){
+//     $login = new \Projet\controllers\ControllerFront();
+//     $error = $login->userLogin();
+// }
 ?>
 
 
@@ -12,7 +12,7 @@ if(!empty($_POST)){
     <div class="titre-connect">
 <h1>SE CONNECTER</h1>
     </div>    
-<form class="login" action="" method="post">
+<form class="login" action="index.php?action=connected" method="post">
 
 <?php if(isset($error)) : ?>
     <?= $error ?>

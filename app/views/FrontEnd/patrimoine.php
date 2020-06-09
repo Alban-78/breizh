@@ -14,9 +14,20 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
     <div class="heritage">
         <section class="historic">
-            <h3>PATRIMOINE HISTORIQUE</h3>
+            <h3>PATRIMOINE HISTORIQUE ET NATUREL</h3>
+                <?php foreach($articles as $article): ?>
+                  
+                        <article>
+                            <img src=<?= $article['image']?> alt="">
+                            <h1><?= $article['title']?></h1>
+                            <p><?= $article['content']?></p>
+                           <!-- <a href="article.php?id=<?= $item['ID']?>">Lire l'article</a> -->
+                        </article>
+                    
+                    <?php endforeach ?>
 
-            <article class="solidor">
+
+            <!-- <article class="solidor">
                 <div>
                     <p>Le Lorem Ipsum est <br>simplement du faux texte employé<br> dans la composition et la mise<br> en
                         page avant impression.<br> Le Lorem Ipsum est le faux texte<br> standard de l'imprimerie
@@ -150,7 +161,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
                 <h4>Le Cap Sizun</h4>
 
 
-            </article>
+            </article> -->
         </section>
 
     </div>
