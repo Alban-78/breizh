@@ -2,7 +2,6 @@
 
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-// echo (password_hash('Kercode', PASSWORD_DEFAULT));
 
 ?>
 

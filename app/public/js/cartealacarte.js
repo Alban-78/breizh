@@ -1,17 +1,17 @@
-var apiUrl = 'http://cartealacarte.ign.fr/api.js';
+// var apiUrl = 'http://cartealacarte.ign.fr/api.js';
 
-cacApp.load(
-   //DIVLD
+// cacApp.load(
+//    //DIVLD
 
-   'sharemap',
+//    'sharemap',
 
-   //PARAMS
+//    //PARAMS
 
-   {apiKey: "473o355hvv4nf82ha3prt10v"},
+//    {apiKey: "473o355hvv4nf82ha3prt10v"},
    
-   //CUSTOMMAP
-   {
+//    //CUSTOMMAP
+//    {
 
-   }
-  ); 
+//    }
+//   ); 
 

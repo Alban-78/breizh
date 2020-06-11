@@ -2,90 +2,84 @@
 
 namespace Projet\Controllers;
 
-class ControllerFront {
-
-    public function home(){
-
-
+class ControllerFront
+{
+    public function home()
+    {
         require 'app/views/FrontEnd/home.php';
     }
 
-    function heritage(){
-        
-         $allArticles  = new \Projet\Models\FrontManager();
-         $articles = $allArticles->articles();
+    public function heritage()
+    {
+        $allArticles  = new \Projet\Models\FrontManager();
+        $articles = $allArticles->articles();
         
         require 'app/views/FrontEnd/patrimoine.php';
     }
 
-    function food(){
-
+    public function food()
+    {
         require 'app/views/FrontEnd/culinaire.php';
     }
 
-    function trip(){
-
+    public function trip()
+    {
         require 'app/views/FrontEnd/circuits.php';
     }
 
-    function login(){
-
+    public function login()
+    {
         require 'app/views/FrontEnd/login.php';
     }
 
-    function mention(){
-
+    public function mention()
+    {
         require 'app/views/FrontEnd/mentionslegales.php';
     }
 
-    function plan(){
-
+    public function plan()
+    {
         require 'app/views/FrontEnd/plandesite.php';
     }
 
-    function account(){
-
+    public function account()
+    {
         require 'app/views/FrontEnd/account.php';
     }
 
-    function page404(){
-
+    public function page404()
+    {
         require 'app/views/FrontEnd/page404.php';
     }
 
-    function pageDeleteUsers() {
-
+    public function pageDeleteUsers()
+    {
         require 'app/views/FrontEnd/deleteUsers.php';
     }
 
-    function modifyPassword() {
-
+    public function modifyPassword()
+    {
         require 'app/views/FrontEnd/modifyPassword.php';
     }
 
 
 
 
-     //PERMET DE PRENDRE CONTACT AVEC L'ADMIN
-    function contact(){
-       
+    //PERMET DE PRENDRE CONTACT AVEC L'ADMIN
+    public function contact()
+    {
         extract($_POST);
         $validation = true;
         $errors = [];
 
-
-        if(empty($name) || empty($email) || empty($objet) || empty($content)){
+       
+        if (empty($name) || empty($email) || empty($objet) || empty($content)) {
             $validation = false;
             $errors[] = "Tous les champs sont obligatoires !";
-        }
-
-        else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $validation = false;
             $errors[] = "L'adresse e-mail n'est pas valide !";
-        }
-
-        else if($validation){
-
+        } elseif ($validation) {
             $to = 'albanhusar@hotmail.fr';
             $sujet = 'Nouveau message de ' . $name;
             $message = '
@@ -105,93 +99,85 @@ class ControllerFront {
             unset($_POST['content']);
 
             $contactManager = new \Projet\Models\FrontManager();
-            $contactManager->contact($name,$email,$objet,$content);
+            $contactManager->contact($name, $email, $objet, $content);
         }
-      
+        
         $this->home();
-       
     }
 
-      //PERMET A L'UTILISATEUR DE S'ENREGISTRER SUR LE SITE
+    //PERMET A L'UTILISATEUR DE S'ENREGISTRER SUR LE SITE
       
-      function registerUser(){
-          
+    public function registerUser()
+    {
         extract($_POST);
     
         $validation = true;
     
         $errors = [];
     
-        if (empty($pseudo) || empty($email) || empty($passwordRegister)) {
+        if (empty($pseudo) || empty($email) || empty($adress) || empty($passwordRegister)) {
             $validation = false;
             $errors[] = 'Tous les champs sont obligatoires !';
         }
     
-        else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $validation = false;
             $errors[] = "L'adresse e-mail n'est pas valide !";
         }
     
     
-        else if ($passwordConfRegister != $password) {
+        if ($passwordConfRegister != $passwordRegister) {
             $validation = false;
             $errors[] = "Le mot de passe de confirmation est incorrect !";
         }
     
-        else if($pseudo) {
+        if ($pseudo) {
             $testPseudo = new \Projet\Models\FrontManager();
             $usersPseudo = $testPseudo->pseudoCheck($pseudo);
-            if($usersPseudo == true) {
-                 $validation = false;
+            if ($usersPseudo == true) {
+                $validation = false;
                 $errors[] = 'Ce pseudo est déjà pris !';
-
-
-            }
-            else if ($validation) {
-                $pseudo = $_POST['pseudo'];
-                $email = $_POST['email'];
-                $passwordRegister = $_POST['passwordRegister'];
-    
-                $register = new \Projet\models\FrontManager();
-                $register->registerUsers($pseudo,$email,$passwordRegister);
-        
-                
-                unset($_POST['pseudo']);
-                unset($_POST['email']);
-                unset($_POST['password']);
             }
         }
+        if ($validation) {
+            $register = new \Projet\models\FrontManager();
+            $usersRegister = $register->registerUsers($pseudo, $email, $adress, $passwordRegister);
+            
+            unset($_POST['pseudo']);
+            unset($_POST['email']);
+            unset($_POST['adress']);
+            unset($_POST['password']);
+        }
     
-    
-    
+
         
         $this->home();
     }
 
-    //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE 
+    //PERMET A L'UTILISATEUR DE SE CONNECTER A SON ESPACE
 
-     function userLogin() {
-        
+    public function userLogin()
+    {
         extract($_POST);
         $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
 
         $login = new \Projet\models\FrontManager();
         $login = $login->login($connectName);
 
-        if(password_verify($connectPassword, $login['password'])){
+        if (password_verify($connectPassword, $login['password'])) {
             $_SESSION['user'] = $login['id'];
             $_SESSION['pseudo'] = $login['pseudo'];
             
             $this->account();
-            // header('Location: index.php?action=account');
-        }else{
+        } else {
             return $error;
         }
     }
 
     //PERMET A L'UTILISATEUR DE SE DECONNECTER DE SON ESPACE MEMBRE
 
-     function userLogout(){
+    public function userLogout()
+    {
         unset($_SESSION["user"]);
         session_destroy();
         $this->home();
@@ -200,16 +186,18 @@ class ControllerFront {
 
     //PERMET A L'UTILISATEUR DE VOIR SES INFOS
 
-     function infos() {
-     $usersInfo = new \Projet\models\FrontManager();
-     $infos = $usersInfo->usersInfo();
-     return $infos;
-}
+    public function infos()
+    {
+        $usersInfo = new \Projet\models\FrontManager();
+        $infos = $usersInfo->usersInfo();
+        return $infos;
+    }
 
 
     //PERMET A L'UTILISATEUR DE SUPPRIMER SON ESPACE MEMBRE
 
-    function deleteUsers() {
+    public function deleteUsers()
+    {
         $users = new \Projet\models\FrontManager();
         $id = $_SESSION['user'];
         $usersDelete = $users->deleteUsers($id);
@@ -218,58 +206,43 @@ class ControllerFront {
         $this->home();
     }
 
-     //PERMET A L'UTILISATEUR DE MODIFIER SON MOT DE PASSE
+    //PERMET A L'UTILISATEUR DE MODIFIER SON MOT DE PASSE
 
-    function changePassword() {
-        if(isset($_SESSION['user'])) {
+    public function changePassword()
+    {
+        if (isset($_SESSION['user'])) {
             extract($_POST);
             $validation = true;
             $errors = [];
             
         
-            if(empty($password) || empty($newPassword) || empty($verifyNewPassword)){
+            if (empty($password) || empty($newPassword) || empty($verifyNewPassword)) {
                 $validation = false;
-                $errors[] = 'Tous les champs sont obligatoires !!!'; 
+                $errors[] = 'Tous les champs sont obligatoires !!!';
             }
 
-            if($verifyNewPassword != $newPassword){
+            if ($verifyNewPassword != $newPassword) {
                 $validation = false;
                 $errors[] = 'le mot de passe de confirmation est incorrect !!!';
             }
 
-            if(!empty($password)) {
+            if (!empty($password)) {
                 $id = $_SESSION['user'];
                 $testPassword = new \Projet\models\FrontManager();
                 $passwordCheck = $testPassword-> passwordCheck();
-                if(!password_verify($password, $passwordCheck)) {
+                if (!password_verify($password, $passwordCheck)) {
                     $validation = false;
                     $errors[] = "Ce mot de passe n'est pas le bon !";
                 }
             }
-            // if(isset($errors)){
-            //     require 'app/views/Frontend/modifyPassword.php';
-            // }
+           
 
-            if($validation){
+            if ($validation) {
                 $changePassword = new \Projet\models\FrontManager();
                 $passwordchange = $changePassword->changeUsersPassword($newPassword);
                 $this->modifyPassword();
             }
             return $errors;
-        }    
+        }
     }
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-

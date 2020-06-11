@@ -1,27 +1,27 @@
-.vertical-line{
+.vertical-line {
     border-left: 2px solid #000;
     display: inline-block;
     height: 1970px;
     margin-right: 0 30px;
-  }
+}
 
 
-.heritage{
+.heritage {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-   
+
 }
 
- .historic h3{
-    text-align: center;
+.historic h3 {
+    margin-left: 500px;
     text-decoration: underline;
     margin-bottom: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
+
 }
 
-.historic img{
+.historic img {
     margin-top: 50px;
     width: 300px;
     height: 300px;
@@ -35,17 +35,18 @@
     transition: .3s ease-in-out;
 }
 
-.historic img:hover{
+.historic img:hover {
     opacity: .5;
 }
 
-.historic h1{
+.historic h1 {
 
     text-align: center;
-} 
+}
 
-.historic p{
-    
+
+.historic p {
+
     text-align: center;
 
 
@@ -345,4 +346,3 @@
 .natural .capsizun h4{
   margin-right: 330px;
 } */
-

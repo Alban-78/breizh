@@ -6,7 +6,7 @@
         max-width: 860px;
     }
 
-    .title  {
+    .title {
 
         position: relative;
         left: 650px;
@@ -20,8 +20,8 @@
         display: inline-block;
     }
 
-    h1{
-        margin-left: 600px; 
+    h1 {
+        margin-left: 600px;
         display: inline-block;
     }
 
@@ -35,32 +35,32 @@
         border: none;
     }
 
-   
+
 
     footer {
         width: 400%;
 
-}
+    }
 
-   footer .paper {
-   text-align: center;
-   margin-left: -10px;
-}
+    footer .paper {
+        text-align: center;
+        margin-left: -10px;
+    }
 
-  footer .copyright{
-      margin-right: -570px;
-  }
+    footer .copyright {
+        margin-right: -570px;
+    }
 
-  .addAdmin{
-    margin-left: 400px;
-    padding-top: 100px;
-    display: inline-block;
-    
-}
+    .addAdmin {
+        margin-left: 400px;
+        padding-top: 100px;
+        display: inline-block;
 
-.admin-management{
-    margin-left: 300px;
-}
+    }
+
+    .admin-management {
+        margin-left: 300px;
+    }
 
 
 

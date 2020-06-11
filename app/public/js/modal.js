@@ -24,7 +24,7 @@ const closeModal = function (e) {
     if (modal === null) return
     if (previouslyFocusedElement !== null) previouslyFocusedElement.focus()
     e.preventDefault()
-    
+
     modal.setAttribute('aria-hidden', 'true')
     modal.removeAttribute('aria-modal')
     modal.removeEventListener('click', closeModal)
@@ -36,9 +36,9 @@ const closeModal = function (e) {
         modal = null
     }
     modal.addEventListener('animationend', hideModal)
-        
-    
-    
+
+
+
 }
 //PERMET D'EMPECHER LA FERMETURE DE LA BOITE MODAL QUAND ON CLIQUE DEDANS
 
@@ -59,7 +59,7 @@ const focusInModal = function (e) {
         index = 0
     }
     if (index < 0) {
-        index = focusables.length -1
+        index = focusables.length - 1
     }
     focusables[index].focus()
 }
@@ -67,7 +67,7 @@ const focusInModal = function (e) {
 
 document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal)
-    
+
 })
 //PERMET DE FERMER LA BOITE MODAL EN APPUYANT SUR LA TOUCHE ECHAP
 

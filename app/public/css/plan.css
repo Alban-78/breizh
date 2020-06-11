@@ -1,21 +1,22 @@
-.plandusite h3{
+.plandusite h3 {
     text-align: center;
     text-decoration: underline;
 }
 
-.index{
+.index {
     text-align: center;
     padding-top: 20px;
-    
-    
-    
-}
-.index ul{
-    list-style-type: none;
-    
+
+
+
 }
 
-.index ul li a{
+.index ul {
+    list-style-type: none;
+
+}
+
+.index ul li a {
     text-decoration: none;
     color: #2b254e;
     justify-content: space-between;

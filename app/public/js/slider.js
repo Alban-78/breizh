@@ -1,7 +1,7 @@
-$(function() {
+$(function () {
 
     //CONFIGURATION
-    
+
     let width = 720;
     let animationSpeed = 1000;
     let pause = 3000;
@@ -15,9 +15,11 @@ $(function() {
 
     let interval;
 
-    function startSlider(){
-        interval = setInterval(function() {
-            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function(){
+    function startSlider() {
+        interval = setInterval(function () {
+            $slideContainer.animate({
+                'margin-left': '-=' + width
+            }, animationSpeed, function () {
                 currentSlide++;
                 if (currentSlide === $slides.length) {
                     currentSlide = 1;

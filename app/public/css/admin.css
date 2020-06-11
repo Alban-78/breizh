@@ -1,49 +1,46 @@
-.title h1{
+.title h1 {
     margin-top: 70px;
 }
 
-#admin-menu{
+#admin-menu {
     margin-left: 300px;
 }
 
-#admin-menu ul 
-{
-    
+#admin-menu ul {
+
     margin: 80px 0px;
 }
 
-#admin-menu ul li
-{
+#admin-menu ul li {
     width: 300px;
     float: left;
-    padding-top: 50px; 
+    padding-top: 50px;
     margin-right: 10px;
     text-align: center
-    
 }
-#admin-menu h4
-{
+
+#admin-menu h4 {
     text-transform: uppercase;
     margin-bottom: 20px;
-    
-    
-}
-#admin-menu p
-{
-    
-   margin-bottom: 20px; 
-}
 
 
-#articlesManagement img{
-   height: 250px;
-  
 }
 
-#usersManagement img{
+#admin-menu p {
+
+    margin-bottom: 20px;
+}
+
+
+#articlesManagement img {
+    height: 250px;
+
+}
+
+#usersManagement img {
     height: 250px;
 }
 
-#messagesManagement img{
+#messagesManagement img {
     height: 250px;
 }

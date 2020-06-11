@@ -1,10 +1,6 @@
 <?php
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-// if(!empty($_POST)){
-//     $login = new \Projet\controllers\ControllerFront();
-//     $error = $login->userLogin();
-// }
 ?>
 
 
@@ -14,7 +10,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
     </div>    
 <form class="login" action="index.php?action=connected" method="post">
 
-<?php if(isset($error)) : ?>
+<?php if (isset($error)) : ?>
     <?= $error ?>
 <?php endif ?>
 
@@ -24,11 +20,15 @@ include_once "app/views/FrontEnd/layouts/header.php";
         
 
         <p><label for="connectName">Votre Nom:</label>
-            <input type="text" name="connectName" id="connectName" placeholder="Votre Nom" value="<?php if(isset($_POST["connectName"]))echo $_POST["connectName"] ?>"></p>
+            <input type="text" name="connectName" id="connectName" placeholder="Votre Nom" value="<?php if (isset($_POST["connectName"])) {
+    echo $_POST["connectName"];
+} ?>"></p>
 
 
         <p><label for="connectPassword">Votre Mot de passe:</label>
-            <input type="text" name="connectPassword" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["connectPassword"]))echo $_POST["connectPassword"] ?>"></p>
+            <input type="text" name="connectPassword" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["connectPassword"])) {
+    echo $_POST["connectPassword"];
+} ?>"></p>
 
 
         

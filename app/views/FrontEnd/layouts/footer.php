@@ -23,6 +23,7 @@
     <script src="app/public/js/modal.js"></script>
     <script src="app/public/js/cookie.js"></script>
     <script src="app/public/js/slider.js"></script>
+    <script src="app/public/js/apigeo.js"></script>
     <script src="app/public/js/cartealacarte.js"></script>
     
 

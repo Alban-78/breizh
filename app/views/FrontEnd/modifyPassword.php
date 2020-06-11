@@ -1,7 +1,7 @@
 <?php
 include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
-if(!empty($_POST)){
+if (!empty($_POST)) {
     $login = new \Projet\controllers\ControllerFront();
     $error = $login->changePassword();
 }
@@ -9,9 +9,9 @@ if(!empty($_POST)){
 <section class="modifyPassword">
 
         <form id="changePassword" method="post" action="" name="changePassword">
-            <?php if(isset($errors)) :
-                if($errors):
-            foreach($errors as $error) : ?>
+            <?php if (isset($errors)) :
+                if ($errors):
+            foreach ($errors as $error) : ?>
              <h3><?= $error ?><h3>
                 
             <?php endforeach; else : ?>
@@ -32,6 +32,6 @@ if(!empty($_POST)){
             </form>
 </section>
 
-<?php 
+<?php
     include_once 'app/views/FrontEnd/layouts/footer.php';
     ?>

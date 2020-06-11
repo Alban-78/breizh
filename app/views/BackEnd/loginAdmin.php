@@ -12,7 +12,7 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
     </div>    
 <form class="loginAdmin" action="indexAdmin.php?action=connected" method="post">
 
-<?php if(isset($error)) : ?>
+<?php if (isset($error)) : ?>
     <?= $error ?>
 <?php endif ?>
 
@@ -22,11 +22,15 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
         
 
         <p><label for="connectNameAdmin">Votre Nom:</label>
-            <input type="text" name="connectNameAdmin" id="connectNameAdmin" placeholder="Votre Nom" value="<?php if(isset($_POST["connectNameAdmin"]))echo $_POST["connectNameAdmin"] ?>"></p>
+            <input type="text" name="connectNameAdmin" id="connectNameAdmin" placeholder="Votre Nom" value="<?php if (isset($_POST["connectNameAdmin"])) {
+    echo $_POST["connectNameAdmin"];
+} ?>"></p>
 
 
         <p><label for="connectPasswordAdmin">Votre Mot de passe:</label>
-            <input type="text" name="connectPasswordAdmin" id="connectPasswordAdmin" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["connectPasswordAdmin"]))echo $_POST["connectPasswordAdmin"] ?>"></p>
+            <input type="text" name="connectPasswordAdmin" id="connectPasswordAdmin" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["connectPasswordAdmin"])) {
+    echo $_POST["connectPasswordAdmin"];
+} ?>"></p>
 
 
         
@@ -41,7 +45,7 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
 </form>
 </section>
 
-<?php 
+<?php
     include_once 'app/views/BackEnd/layouts/footerBack.php';
     ?>
 
