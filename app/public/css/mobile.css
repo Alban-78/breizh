@@ -3,10 +3,10 @@
 @media screen and (max-width:860px) {
 
 
-    body{
+    body {
         max-width: 860px;
     }
-   
+
     .title {
         position: relative;
         left: 650px;
@@ -17,7 +17,7 @@
         display: none;
     }
 
-    
+
     .menuprincipal {
         position: relative;
     }
@@ -60,10 +60,10 @@
 
     /*----EFFACER LA BARRE DE COOKIE----*/
 
-    #cookie-bar{
+    #cookie-bar {
         display: none;
     }
-    
+
 
     /*----FAIT DISPARAITRE LE MAIN IMAGE EN RESPONSIVE----*/
     #main-image {
@@ -105,7 +105,7 @@
         display: none;
     }
 
-    #contact .paper{
+    #contact .paper {
         margin-left: 250px;
     }
 
@@ -140,28 +140,29 @@
 
 
     /*----PAGE PATRIMOINE----*/
-  
-    .historic{
+
+    .historic {
         margin-top: 100px;
-        
+
 
     }
 
-    .historic article{
+    .historic article {
         margin-right: 550px;
     }
 
-    .historic h1{
+    .historic h1 {
         margin-left: 570px;
     }
 
-    .historic p{
+    .historic p {
         margin-left: 570px;
     }
 
-    .historic image{
+    .historic image {
         margin-right: 550px;
     }
+
     /* .heritage h3 {
 
         margin-top: 70px;
@@ -218,8 +219,8 @@
     }
 
      /*----HISTORIC----*/
-     
-     /* .solidor {
+
+    /* .solidor {
         margin-left: 30px;
     } 
 
@@ -312,98 +313,101 @@
     .capsizun h4 {
         width: 50%;
         margin-left: 60px;
-     }  */ 
+     }  */
     /*------PAGE CULINAIRE-----*/
 
-     .titre-culinaire{
-       display: inline-block;
-       margin-left: 450px;
-       
-    }
-     /*------PAGE SE CONNECTER-----*/
-      
+    .titre-culinaire {
+        display: inline-block;
+        margin-left: 450px;
 
-     .connection .titre-connect{
-    
-      margin-left: 350px;
-      
     }
 
-    fieldset{
-       
+    /*------PAGE SE CONNECTER-----*/
+
+
+    .connection .titre-connect {
+
+        margin-left: 350px;
+
+    }
+
+    fieldset {
+
         height: 100px;
         width: 500px;
         margin-left: 250px;
 
-        
+
     }
 
-    .contact fieldset p{
+    .contact fieldset p {
         display: block;
         margin: 0 auto;
         padding-top: 10px;
     }
-    .container{
-        
+
+    .container {
+
         margin-left: -250px;
     }
 
-    .hermine{
+    .hermine {
         margin-right: -600px;
     }
 
     /*----PAGE MENTIONS LEGALES----*/
-    
-    .mentions{
-       margin-left: 600px;
-       display: inline-block;
-       margin-top: -100px;
+
+    .mentions {
+        margin-left: 600px;
+        display: inline-block;
+        margin-top: -100px;
     }
 
-   
 
 
-   /*----PAGE PLAN DE SITE----*/
 
-   .plandusite h3{
-      display: flex;
-      margin-left: 700px;
-      margin-top: 200px;
-   }
-   .index{
-       display: inline-block;
-       margin-left: 700px;
-   }
+    /*----PAGE PLAN DE SITE----*/
+
+    .plandusite h3 {
+        display: flex;
+        margin-left: 700px;
+        margin-top: 200px;
+    }
+
+    .index {
+        display: inline-block;
+        margin-left: 700px;
+    }
 
 
-     /*----PAGE ACCOUNT----*/
+    /*----PAGE ACCOUNT----*/
 
-     .randoshare{
+    .randoshare {
         margin-left: 650px;
-     }
+    }
 
-     .randoshare h1{
-         display: inline-block;
-         margin-top: 50px;
-         margin-left: -30px;
-     }
+    .randoshare h1 {
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: -30px;
+    }
 
-     .randoshare .boussole{
-         margin-right: 10px;
-     }
+    .randoshare .boussole {
+        margin-right: 10px;
+    }
 
-     .randoshare h3{
-         display: inline-block;
-     }
+    .randoshare h3 {
+        display: inline-block;
+    }
 
-     .randoshare .zoom{
-         margin-left: 100px;
-         margin-top: 30px;
-     }
+    .randoshare .zoom {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
 
-     .button-4{
-         display: inline-block;
-         margin-left: 650px;
-     }
+    .button-4 {
+        display: inline-block;
+        margin-left: 650px;
+    }
 
 }

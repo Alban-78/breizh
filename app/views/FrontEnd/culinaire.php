@@ -99,21 +99,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
        Profitant du microclimat local, la culture des fraises est pratiquée dans la commune de Plougastel-Daoulas depuis le XVIIIe siècle.</p>
 </article>
 
-    
-
-
-
-
     </section>
-
-
-
-
-
-
-
-
-
 
 <?php
     include_once 'app/views/FrontEnd/layouts/footer.php';

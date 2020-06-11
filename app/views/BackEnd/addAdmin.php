@@ -9,7 +9,7 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
     </div>    
 <form class="addAdmin" action="indexAdmin.php?action=registerAdmin" method="post">
 
-<?php if(isset($error)) : ?>
+<?php if (isset($error)) : ?>
     <?= $error ?>
 <?php endif ?>
 
@@ -19,19 +19,27 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
         
 
         <p><label for="pseudo">Votre Nom:</label>
-            <input type="text" name="pseudo" id="pseudo" placeholder="Votre Nom" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>"></p>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Votre Nom" value="<?php if (isset($_POST["pseudo"])) {
+    echo $_POST["pseudo"];
+} ?>"></p>
 
         
         <p><label for="email">Votre Nom:</label>
-            <input type="text" name="email" id="email" placeholder="Votre Email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>"></p>
+            <input type="text" name="email" id="email" placeholder="Votre Email" value="<?php if (isset($_POST["email"])) {
+    echo $_POST["email"];
+} ?>"></p>
 
 
         <p><label for="password">Votre Mot de passe:</label>
-            <input type="text" name="password" id="password" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["password"]))echo $_POST["password"] ?>"></p>
+            <input type="text" name="password" id="password" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["password"])) {
+    echo $_POST["password"];
+} ?>"></p>
 
 
         <p><label for="passwordConfRegister">Confirmation de votre Mot de passe:</label>
-            <input type="text" name="passwordConfRegister" id="passwordConfRegister" placeholder="Votre Mot de passe" value="<?php if(isset($_POST["passwordConfRegister"]))echo $_POST["passwordConfRegister"] ?>"></p>
+            <input type="text" name="passwordConfRegister" id="passwordConfRegister" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["passwordConfRegister"])) {
+    echo $_POST["passwordConfRegister"];
+} ?>"></p>
 
 
 
@@ -54,6 +62,6 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
 
 
 
-<?php 
+<?php
     include_once 'app/views/BackEnd/layouts/footerBack.php';
     ?>

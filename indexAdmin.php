@@ -12,42 +12,19 @@ try {
     $controllerBack = new \Projet\Controllers\ControllerBack(); //OBJET CONTROLLER
 
     if (isset($_GET['action'])) {
-
-        if($_GET['action'] == 'connected'){
+        if ($_GET['action'] == 'connected') {
             $controllerBack -> adminLogin();
-              
-        }
-
-        elseif($_GET['action'] == 'connected'){
+        } elseif ($_GET['action'] == 'connected') {
             $controllerBack -> addAdmin();
-              
-        }
-
-        elseif ($_GET['action'] == 'registerAdmin') {
+        } elseif ($_GET['action'] == 'registerAdmin') {
             $controllerBack -> registerAdmin();
-        }
-
-        elseif ($_GET['action'] == 'articles') {
+        } elseif ($_GET['action'] == 'articles') {
             $controllerBack -> articles();
-        }
-     
-        elseif ($_GET['action'] == 'newArticle') {
+        } elseif ($_GET['action'] == 'newArticle') {
             $controllerBack -> newArticle();
         }
-
-        elseif ($_GET['action'] == 'deleteArticle') {
-            $controllerBack -> deleteArticle();
-        }
-
-
-
-        
-
-
-    }else{
+    } else {
         $controllerBack->login();
     }
-
 } catch (Exception $e) {
-    
 }

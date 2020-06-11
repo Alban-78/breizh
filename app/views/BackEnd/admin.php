@@ -14,7 +14,7 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
                 <li id="articlesManagement">
                     <img src="app/public/Images/phare.png" alt="phare">
                     <a href="indexAdmin.php?action=articles"><h4>ARTICLES</h4></a>
-                    <p>Créer, modifiés où annuler des articles.</p>
+                    <p>Créer des articles.</p>
                 </li>
 
                 <li id="usersManagement">
@@ -41,6 +41,6 @@ include_once "app/views/BackEnd/layouts/headerBack.php";
 
 
 
-<?php 
+<?php
     include_once 'app/views/BackEnd/layouts/footerBack.php';
     ?>

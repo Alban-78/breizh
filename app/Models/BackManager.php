@@ -1,10 +1,11 @@
-<?php 
+<?php
 
 namespace Projet\models;
 
-class BackManager extends Manager{
-
-    public function viewBack() {
+class BackManager extends Manager
+{
+    public function viewBack()
+    {
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('Methode sql');
         $req->execute(array());
@@ -12,8 +13,8 @@ class BackManager extends Manager{
     }
     
 
-    public function login($connectNameAdmin) {
-        
+    public function login($connectNameAdmin)
+    {
         $bdd = $this->dbConnect();
         $login = $bdd->prepare('SELECT * FROM admin WHERE pseudo = ?');
         $login->execute([$connectNameAdmin]);
@@ -25,7 +26,8 @@ class BackManager extends Manager{
 
     //ENREGISTRE UN NOUVEL ADMIN
 
-    public function adminRegister($email,$pseudo,$password) {
+    public function adminRegister($email, $pseudo, $password)
+    {
         $bdd = $this->dbConnect();
         $register = $bdd->prepare('INSERT INTO admin(email, pseudo, password) VALUES (:email, :pseudo, :password)');
         $register->execute([
@@ -35,27 +37,18 @@ class BackManager extends Manager{
         ]);
         return $register;
     }
-     //PERMET D'AJOUTER UN ARTICLE
+    //PERMET D'AJOUTER UN ARTICLE
 
-    public function addArticle($title, $description, $upload_img){
+    public function addArticle($title, $description, $upload_img)
+    {
         $bdd = $this->dbConnect();
-        $addArticle = $bdd->prepare('INSERT INTO articles(title, content, image) VALUES (:title, :content, :image)');
+        $addArticle = $bdd->prepare('INSERT INTO articles(title, admin_id, content, image) VALUES (:title, :admin_id, :content, :image)');
         $addArticle->execute([
+            'admin_id' => $_SESSION['admin'],
             'title' => htmlentities($title),
             'content' => htmlentities($description),
             'image' => $upload_img
         ]);
         return $addArticle;
     }
-
-     //PERMET DE SUPPRIMER UN ARTICLE
-     
-     public function deleteArticleContent() {
-        $bdd = $this->dbConnect();
-        $id = (int)$_GET['id'];
-        $delete = $bdd->prepare("DELETE articles.* FROM articles WHERE id = ?");
-        $delete->execute([$id]);
-        return $delete;
-    }
 }
-

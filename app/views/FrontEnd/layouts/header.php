@@ -1,8 +1,5 @@
 <?php
-// if (!empty($_POST)) {
-//     $registerS = new Projet\Controllers\ControllerFront();
-//     $errors = $registerS->registerUser();
-// }
+
 ?>
 <body>
     <header>
@@ -22,7 +19,7 @@
                 <li><a href="index.php?action=heritage">Patrimoine</a></li>
                 <li><a href="index.php?action=food">Excursions culinaires</a></li>
                 <li><a href="index.php?action=trip">Circuits</a></li>
-                <?php if(isset($_SESSION['user'])) : ?>
+                <?php if (isset($_SESSION['user'])) : ?>
                 <li><a href="index.php?action=account">Mon compte</a></li>
                 <li><a href="index.php?action=disconnect">Se déconnecter</a></li>
                 <?php else : ?>
@@ -37,9 +34,9 @@
             
                 <form name="mon-formulaire1" method="post" action="index.php?action=register">
         <?php
-        if(isset($errors)) :
-        if($errors) :
-        foreach($errors as $error) :
+        if (isset($errors)) :
+        if ($errors) :
+        foreach ($errors as $error) :
         ?>
 
             <div class="row">
@@ -73,24 +70,40 @@
 
               <p>
                  Votre Nom :<br />
-                  <input id="pseudo" type="text" name="pseudo" value="<?php if(isset($_POST["pseudo"]))echo $_POST["pseudo"] ?>" />
+                  <input id="pseudo" type="text" name="pseudo" value="<?php if (isset($_POST["pseudo"])) {
+                echo $_POST["pseudo"];
+            } ?>" />
               </p>
 
               <p>
                  Votre Mail :<br />
-                  <input id="emailRegister" type="text" name="email" value="<?php if(isset($_POST["email"]))echo $_POST["email"] ?>" />
+                  <input id="emailRegister" type="text" name="email" value="<?php if (isset($_POST["email"])) {
+                echo $_POST["email"];
+            } ?>" />
               </p>
 
-
-              <p>
+             <p>
                 Votre Mot de Passe :<br />
-                  <input id="passwordRegister" type="password" name="passwordRegister" value="<?php if(isset($_POST["passwordRegister"]))echo $_POST["passwordRegister"] ?>" />
+                  <input id="passwordRegister" type="password" name="passwordRegister" value="<?php if (isset($_POST["passwordRegister"])) {
+                echo $_POST["passwordRegister"];
+            } ?>" />
              </p>
 
              <p>
                 Confirmation de votre Mot de Passe :<br />
-                  <input id="passwordConfRegister" type="password" name="passwordConfRegister" value="<?php if(isset($_POST["passwordConfRegister"]))echo $_POST["passwordConfRegister"] ?>" />
+                  <input id="passwordConfRegister" type="password" name="passwordConfRegister" value="<?php if (isset($_POST["passwordConfRegister"])) {
+                echo $_POST["passwordConfRegister"];
+            } ?>" />
              </p>
+
+             <p>
+                 Votre Adresse :<br />
+                  <input id="adress" type="text" name="adress" value="<?php if (isset($_POST["adress"])) {
+                echo $_POST["adress"];
+            } ?>" onkeyup="search()" required />
+                  <ul id="matchAddress"></ul>
+                  <span id="forgetAdress"></span>
+              </p>
              
              <br>
              <p>

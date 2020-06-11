@@ -12,82 +12,42 @@ try {
     $controllerFront = new \Projet\Controllers\ControllerFront(); //OBJET CONTROLLER
 
     if (isset($_GET['action'])) {
-
-
-        if($_GET['action'] == 'actus'){
+        if ($_GET['action'] == 'actus') {
             $controllerFront->actus();
-              
-        }
-        else if($_GET['action'] == 'heritage') {
+        } elseif ($_GET['action'] == 'heritage') {
             $controllerFront->heritage();
-        }
-
-        else if($_GET['action'] == 'food') {
+        } elseif ($_GET['action'] == 'food') {
             $controllerFront->food();
-        }
-
-        else if($_GET['action'] == 'trip') {
+        } elseif ($_GET['action'] == 'trip') {
             $controllerFront->trip();
-        }
-
-        else if($_GET['action'] == 'login') {
+        } elseif ($_GET['action'] == 'login') {
             $controllerFront->login();
-        }
-
-        else if($_GET['action'] == 'page404') {
+        } elseif ($_GET['action'] == 'page404') {
             $controllerFront->page404();
-        }
-
-        else if($_GET['action'] == 'plan') {
+        } elseif ($_GET['action'] == 'plan') {
             $controllerFront->plan();
-        }
-
-        else if($_GET['action'] == 'mention') {
+        } elseif ($_GET['action'] == 'mention') {
             $controllerFront->mention();
-        }
-
-        else if($_GET['action'] == 'register') {
+        } elseif ($_GET['action'] == 'register') {
             $controllerFront->registerUser();
-        }
-
-        else if($_GET['action'] == 'contact') {
+        } elseif ($_GET['action'] == 'contact') {
             $controllerFront->contact();
-        }
-
-        else if($_GET['action'] == 'account') {
+        } elseif ($_GET['action'] == 'account') {
             $controllerFront->account();
-        }
-
-        else if($_GET['action'] == 'disconnect') {
+        } elseif ($_GET['action'] == 'disconnect') {
             $controllerFront->userLogout();
-        }
-
-        else if($_GET['action'] == 'deleteUsers') {
+        } elseif ($_GET['action'] == 'deleteUsers') {
             $controllerFront->deleteUsers();
-        }
-
-        elseif ($_GET['action'] == 'changePassword') {
+        } elseif ($_GET['action'] == 'changePassword') {
             $controllerFront -> changePassword();
-        }
-
-        elseif ($_GET['action'] == 'modifyPassword') {
+        } elseif ($_GET['action'] == 'modifyPassword') {
             $controllerFront -> modifyPassword();
-        }
-
-        elseif ($_GET['action'] == 'connected') {
+        } elseif ($_GET['action'] == 'connected') {
             $controllerFront -> userLogin();
         }
-
-
-
-
-        
-
-   
-    }else{
+    } else {
         $controllerFront->home();
     }
-
-}catch (Exception $e) {
+} catch (Exception $e) {
     require 'app/views/frontend/errorLoading.php';
 }

@@ -16,6 +16,6 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
 
 
-<?php 
+<?php
     include_once 'app/views/FrontEnd/layouts/footer.php';
     ?>

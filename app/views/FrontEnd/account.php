@@ -3,7 +3,7 @@ include_once "app/views/FrontEnd/layouts/head.php";
 include_once "app/views/FrontEnd/layouts/header.php";
 ?>
 
-<?php 
+<?php
 $usersInfo = new \Projet\controllers\ControllerFront();
 $infos = $usersInfo->infos();
 ?>
@@ -39,6 +39,6 @@ $infos = $usersInfo->infos();
 </div>
 
 
-<?php 
+<?php
     include_once 'app/views/FrontEnd/layouts/footer.php';
     ?>
