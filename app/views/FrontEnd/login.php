@@ -26,7 +26,7 @@ include_once "app/views/FrontEnd/layouts/header.php";
 
 
         <p><label for="connectPassword">Votre Mot de passe:</label>
-            <input type="text" name="connectPassword" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["connectPassword"])) {
+            <input type="password" name="connectPassword" id="connectPassword" placeholder="Votre Mot de passe" value="<?php if (isset($_POST["connectPassword"])) {
     echo $_POST["connectPassword"];
 } ?>"></p>
 
