@@ -163,157 +163,7 @@
         margin-right: 550px;
     }
 
-    /* .heritage h3 {
 
-        margin-top: 70px;
-    }
-
-    .solidor p{
-        display: none;
-    }
-
-    .vannes p{
-        display: none;
-    }
-
-    .fortlalatte p{
-        display: none;
-    }
-
-    .concarneau p{
-        display: none;
-    }
-
-    .brest p{
-        display: none;
-    }
-
-    .raz p{
-        display: none;
-    }
-
-    .perros p{
-        display: none;
-    }
-
-    .plougrescant p{
-        display: none;
-    }
-
-    .golfe p{
-        display: none;
-    }
-
-    .capsizun p{
-        display: none;
-    }
-
-    .historic h4 {
-        margin-left: 90px;
-        width: 50%;
-        margin-left: 60px;
-    }
-
-    .vertical-line {
-        display: none;
-    }
-
-     /*----HISTORIC----*/
-
-    /* .solidor {
-        margin-left: 30px;
-    } 
-
-
-
-    .vannes {
-        margin-left: 30px;
-    } 
-
-
-
-    .fortlalatte {
-        margin-left: 30px;
-    }
-
-
-    .concarneau {
-        margin-left: 30px;
-    } 
-
-
-    .brest {
-        margin-left: 30px;
-    }  */
-
-    /*----NATURAL----*/
-
-    /* .raz {
-        margin-right: 250px;
-    }
-
-    .raz img {
-        margin-right: 120px;
-    }
-
-    .raz h4 {
-       width: 50%;
-       margin-left: 60px;
-    }
-
-
-    .perros {
-        margin-right: 250px;
-    }
-
-    .perros img {
-        margin-right: 120px;
-    }
-
-    .perros h4 {
-        width: 50%;
-        margin-left: 60px;
-     }
- 
-
-    .plougrescant {
-        margin-right: 250px;
-    }
-
-    .plougrescant img {
-        margin-right: 120px;
-    }
-
-    .plougrescant h4 {
-        width: 50%;
-        margin-left: 60px;
-     }
-
-    .golfe {
-        margin-right: 250px;
-    }
-
-    .golfe img {
-        margin-right: 120px;
-    }
-
-    .golfe h4 {
-        width: 50%;
-        margin-left: 60px;
-     }
-
-    .capsizun {
-        margin-right: 250px;
-    }
-
-    .capsizun img {
-        margin-right: 120px;
-    }
-
-    .capsizun h4 {
-        width: 50%;
-        margin-left: 60px;
-     }  */
     /*------PAGE CULINAIRE-----*/
 
     .titre-culinaire {
@@ -327,17 +177,22 @@
 
     .connection .titre-connect {
 
-        margin-left: 350px;
+        margin-left: 600px;
 
     }
 
     fieldset {
 
-        height: 100px;
+        height: 200px;
         width: 500px;
-        margin-left: 250px;
+        margin-left: 500px;
 
 
+    }
+
+    .slide {
+
+        display: none;
     }
 
     .contact fieldset p {
@@ -352,7 +207,7 @@
     }
 
     .hermine {
-        margin-right: -600px;
+        display: none;
     }
 
     /*----PAGE MENTIONS LEGALES----*/
