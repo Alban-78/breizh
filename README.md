@@ -9,11 +9,6 @@ un espace membre afin de partager des itinéraire de ballades dans les différen
 
 Tro-Vale Breizh
 
-# Documentation
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/50b9331192d56bbd79f8/maintainability)](https://codeclimate.com/github/Alban-78/breizh/maintainability)
-
-
 ### Technologies
 
 Les technologies utlisées pour ce projet sont les suivantes:
@@ -24,20 +19,53 @@ Les technologies utlisées pour ce projet sont les suivantes:
     * JavaScript
     * JQuery 
     * API REST 'adresse.data.gouv'
-    * API REST 'Carte à la carte' par l'IGNrando en cours 
+    * API REST 'Carte à la carte' par l'IGNrando (à venir) 
     * PHP
 
 
 ### Installation
 
 1. Cloner le dépôt via votre terminal de commande en utilisant la commande 
-   "git clone git@github.com:Alban-78/breizh.git"
+```
 
+git clone git@github.com:Alban-78/breizh.git
 
-2. Installer composer sur votre ordinateur puis via votre terminal de commande aller à la racine du dossier et faite un "composer install"
+```
 
-3. Lancer ensuite Laragon puis tapez "breizh.test" en local.
+2. Installer composer sur votre ordinateur puis via votre terminal de commande aller à la racine du dossier et faite un :
 
+```
+
+composer install
+
+```
+
+3. Faire un import de la base de donnée présente dans le dossier sql => app/public/sql et dans lequel se trouve un diagramme SQL qui shématise la base de donnée.
+
+4. Dans le dossier manager.php, il faudra changer le nom de la base de donnée : 
+
+```
+
+class Manager
+{
+    protected function dbConnect()
+    {
+        try {
+            $bdd = new \PDO('mysql:host=localhost;dbname=Votre_Nom_De_Db;charset=utf8', 'root', '');
+            return $bdd;
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
+        }
+    }
+}
+
+```
+
+5. Aller sur votre navigateur et taper 'localhost'
+
+6. Pour aller sur la partie admin vous pouvez entrer l'identifiant et mot de passe suivant:
+   Votre nom => Alban
+   Votre mot de passe => Kercode
 
 ### Autheur
 
