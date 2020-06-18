@@ -1,12 +1,18 @@
 <?php
+
 //IMPORTANT POUR LA SECURITE DE VOS SCRIPTS : LES SESSIONS
 
 //DEMARRE UNE SESSION
 session_start();
 
 //AUTOLOAD.PHP GENERE AVEC COMPOSER
+require_once __DIR__  . '/vendor/autoload.php';
 
-require_once __DIR__ . '/vendor/autoload.php';
+if(file_exists(__DIR__ . '/.env')){
+    $dotenv = \Dotenv\Dotenv::createimmutable(__DIR__);
+    $dotenv->load();
+}
+
 
 try {
     $controllerFront = new \Projet\Controllers\ControllerFront(); //OBJET CONTROLLER

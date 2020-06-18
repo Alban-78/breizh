@@ -6,13 +6,20 @@ class Manager
     protected function dbConnect()
     {
         try {
-            $bdd = new \PDO('mysql:host=alban56.alwaysdata.net;dbname=alban56_breizh;charset=utf8', 'alban56', 'Sacramento78250');
+            $host= $_ENV['DB_HOST'];
+            $name = $_ENV['DB_DATABASE'];
+            $username = $_ENV['DB_USERNAME'];
+            $password = $_ENV['DB_PASSWORD'];
+        
+            $dsn= 'mysql:host='. $host .';dbname='. $name .';charset=utf8';
+            $bdd =new \PDO($dsn, $username, $password);
+
             return $bdd;
-        } catch (Exception $e) {
+        } catch (Exeption $e) {
             die('Erreur : ' . $e->getMessage());
         }
-    }
-    // protected function dbConnect()
+    
+        // protected function dbConnect()
     // {
     //     try {
     //         $bdd = new \PDO('mysql:host=localhost;dbname=breizh;charset=utf8', 'root', '');
@@ -21,4 +28,5 @@ class Manager
     //         die('Erreur : ' . $e->getMessage());
     //     }
     // }
+    }
 }
