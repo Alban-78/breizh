@@ -50,9 +50,7 @@ try {
             $controllerFront -> modifyPassword();
         } elseif ($_GET['action'] == 'connected') {
             $controllerFront -> userLogin();
-        } elseif ($_GET['action'] == 'connected') {
-            $controllerFront -> userLogin();
-        }
+        } 
     } else {
         $controllerFront->home();
     }
