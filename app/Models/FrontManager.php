@@ -13,7 +13,7 @@ class FrontManager extends Manager
     }
 
     
-    //ENVOIE LE FORMULAIRE DE CONTACT
+    //ENVOIE LE FORMULAIRE DE CONTACT A L'ADMIN
 
     public function contact($name, $email, $objet, $content)
     {
