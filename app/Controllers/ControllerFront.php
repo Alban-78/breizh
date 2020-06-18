@@ -140,7 +140,7 @@ class ControllerFront
             }
         }
         if ($validation) {
-            $register = new \Projet\models\FrontManager();
+            $register = new \Projet\Models\FrontManager();
             $usersRegister = $register->registerUsers($pseudo, $email, $adress, $passwordRegister);
             
             unset($_POST['pseudo']);
@@ -161,7 +161,7 @@ class ControllerFront
         extract($_POST);
         $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
 
-        $login = new \Projet\models\FrontManager();
+        $login = new \Projet\Models\FrontManager();
         $login = $login->login($connectName);
 
         if (password_verify($connectPassword, $login['password'])) {
@@ -188,7 +188,7 @@ class ControllerFront
 
     public function infos()
     {
-        $usersInfo = new \Projet\models\FrontManager();
+        $usersInfo = new \Projet\Models\FrontManager();
         $infos = $usersInfo->usersInfo();
         return $infos;
     }
@@ -198,7 +198,7 @@ class ControllerFront
 
     public function deleteUsers()
     {
-        $users = new \Projet\models\FrontManager();
+        $users = new \Projet\Models\FrontManager();
         $id = $_SESSION['user'];
         $usersDelete = $users->deleteUsers($id);
         unset($_SESSION['user']);
@@ -228,7 +228,7 @@ class ControllerFront
 
             if (!empty($password)) {
                 $id = $_SESSION['user'];
-                $testPassword = new \Projet\models\FrontManager();
+                $testPassword = new \Projet\Models\FrontManager();
                 $passwordCheck = $testPassword-> passwordCheck();
                 if (!password_verify($password, $passwordCheck)) {
                     $validation = false;
@@ -238,7 +238,7 @@ class ControllerFront
            
 
             if ($validation) {
-                $changePassword = new \Projet\models\FrontManager();
+                $changePassword = new \Projet\Models\FrontManager();
                 $passwordchange = $changePassword->changeUsersPassword($newPassword);
                 $this->modifyPassword();
             }

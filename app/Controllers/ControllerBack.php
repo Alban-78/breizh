@@ -29,7 +29,7 @@ class ControllerBack
         extract($_POST);
         $error = 'Les identifiants ne correspondent pas à ceux qui ont été enregistrer !';
 
-        $login = new \Projet\models\BackManager();
+        $login = new \Projet\Models\BackManager();
         $login = $login->login($connectNameAdmin);
         
         if (password_verify($connectPasswordAdmin, $login['password'])) {
@@ -66,7 +66,7 @@ class ControllerBack
             $validation = false;
             $errors[] = "Tous les champs sont obligatoires !";
         } elseif ($validation) {
-            $article = new \Projet\models\BackManager();
+            $article = new \Projet\Models\BackManager();
             $article->addArticle($title, $description, $upload_img);
             
             header('Location: index.php?action=heritage');
